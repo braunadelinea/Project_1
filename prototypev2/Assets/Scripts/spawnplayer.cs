@@ -8,11 +8,8 @@ public class spawnplayer : MonoBehaviour
     public GameObject player;
     public LayerMask tile;
     public bool spawnedplayer; 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    
+    //NOTE: if changes propsed in levelgen.cs are made, this script will become obselete. 
 
     // Update is called once per frame
     void Update()
