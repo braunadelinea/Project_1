@@ -7,7 +7,7 @@ public class spawnplayer : MonoBehaviour
     public levelgen levelgen;
     public GameObject player;
     public LayerMask tile;
-    public bool spawnedplayer; 
+    public static bool spawnedplayer;
     
     //NOTE: if changes propsed in levelgen.cs are made, this script will become obselete. 
 
@@ -21,7 +21,7 @@ public class spawnplayer : MonoBehaviour
             Collider2D checkspawn = Physics2D.OverlapCircle(rooms[rand].transform.position, 1, tile); //throw a "scout" into where the player would spawn. 
             if (checkspawn == null) //if no collision is detected
             {
-                Instantiate(player, rooms[rand].transform.position, Quaternion.identity); //create the player 
+                player.transform.position = rooms[rand].transform.position; //create the player 
                 spawnedplayer = true; //no need to spawn the player anymore 
             }
         }
