@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class playercontroller : MonoBehaviour
 {
-    public float moveIncrement; 
+    public float moveIncrement;
+    public GameObject currentroom; 
     // Start is called before the first frame update
     void Start()
     {
@@ -40,6 +41,13 @@ public class playercontroller : MonoBehaviour
                 pos.y += moveIncrement;
                 this.transform.position = pos;
             }
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Room")) {
+            Debug.Log("Successfully Detected Room Collision");
+            currentroom = collision.gameObject; 
         }
     }
 

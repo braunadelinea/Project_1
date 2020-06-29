@@ -4,19 +4,13 @@ using UnityEngine;
 
 public class camerafollow : MonoBehaviour
 {
-    public GameObject objectToFollow;
-
-    public float speed = 2.0f;
+    public GameObject player; 
 
     void Update()
     {
-        float interpolation = speed * Time.deltaTime;
-
-        Vector3 position = this.transform.position;
-        position.y = Mathf.Lerp(this.transform.position.y, objectToFollow.transform.position.y, interpolation);
-        position.x = Mathf.Lerp(this.transform.position.x, objectToFollow.transform.position.x, interpolation);
-
-        this.transform.position = position;
+        Vector3 pos = player.GetComponent<playercontroller>().currentroom.transform.position;
+        pos.z -= 10;
+        this.transform.position = pos; 
     }
 
 }

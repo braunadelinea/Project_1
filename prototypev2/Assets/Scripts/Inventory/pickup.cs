@@ -12,17 +12,22 @@ public class pickup : MonoBehaviour
         inventory = GameObject.FindGameObjectWithTag("player").GetComponent<Inventory>();
     }
 
-    // Update is called once per frame
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnDrawGizmos()
     {
-        if (other.CompareTag("player"))
+        Gizmos.DrawWireSphere(this.transform.position, 1); 
+    }
+    // Update is called once per frame
+    private void Update() 
+    {
+        Collider2D other = Physics2D.OverlapCircle(this.transform.position, 1); 
+        if (other != null && other.CompareTag("player") && Input.GetKeyDown(KeyCode.E))
         {
+            Debug.Log("Collision and Key Detected"); 
             for (int i = 0; i < this.inventory.slots.Length; i++)
             {
-                if (this.inventory.isfull[i] == false)
+                if (this.inventory.slots[i].GetComponent<Slot>().occupied == false)
                 {
-                    //add item to inventory 
-                    this.inventory.isfull[i] = true;
+                    this.inventory.slots[i].GetComponent<Slot>().occupied = true;
                     Instantiate(itembutton, this.inventory.slots[i].transform, false);
                     Destroy(gameObject); 
                     break;

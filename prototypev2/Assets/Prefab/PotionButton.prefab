@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 59948677500784427}
   - component: {fileID: 551652591530644149}
   - component: {fileID: 5958389800889235358}
+  - component: {fileID: 97257369107189151}
+  - component: {fileID: -641055648868547355}
   m_Layer: 5
   m_Name: PotionButton
   m_TagString: Untagged
@@ -116,4 +118,41 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 551652591530644149}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: -641055648868547355}
+        m_MethodName: TransferToHotbar
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &97257369107189151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6981152002278503387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30179c85e7ceccf42bc7dbf01febe0a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 3
+  item: {fileID: 1827958150843918186, guid: f4935ff221b446f448eac4875b7f4e4a, type: 3}
+--- !u!114 &-641055648868547355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6981152002278503387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94ba9d7b620d88747b8d233b45b0ae87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
