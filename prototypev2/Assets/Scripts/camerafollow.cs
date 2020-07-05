@@ -8,7 +8,7 @@ public class camerafollow : MonoBehaviour
 
     void Update()
     {
-        Vector3 pos = player.GetComponent<playercontroller>().currentroom.transform.position;
+        Vector3 pos = player.GetComponent<PlayerManager>().transform.position;
         pos.z -= 10;
         this.transform.position = pos; 
     }

@@ -4,23 +4,30 @@ using UnityEngine;
 
 public class Slot : MonoBehaviour
 {
-    private Inventory inventory;
-    public int i;
-    public bool occupied; 
+    //---- MEMBER VARIABLES ----//
 
-    private void Start() {
-        inventory = GameObject.FindGameObjectWithTag("player").GetComponent<Inventory>(); 
-    }
-    private void Update()
+    private Item item;
+    private GameObject slot;
+
+    //---- METHODS ----//
+
+    void Start()
     {
-        if (transform.childCount <= 0) {
-            occupied = false; 
-        }
+        slot = gameObject;
     }
-    public void DropItem() {
-        foreach (Transform child in transform) {
-            child.GetComponent<spawnitem>().SpawnDroppedItem();
-            GameObject.Destroy(child.gameObject); 
+
+    //---- GETTER METHODS ----//
+
+    public Item GetItem()
+    {
+        return item;
+    }
+
+    public void SetItem(Item newItem)
+    {
+        if (item != null)
+        {
+            Debug.Log("ERROR: Item attempted to be placed in occupied slot");
         }
     }
 }
