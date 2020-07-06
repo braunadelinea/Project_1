@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Room
   - player
+  - Tile
+  - BossRoom
+  - boss
   layers:
   - Default
   - TransparentFX

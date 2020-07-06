@@ -34,8 +34,6 @@ public class PlayerManager : MonoBehaviour
         Vector3 cameraPosition = /*currentroom.*/transform.position;
         cameraPosition.z -= 10;
 
-        if (spawnplayer.spawnedplayer == true)
-        {
             Vector3 position = this.transform.position;
             if (Input.GetKey(KeyCode.A))
             {
@@ -57,7 +55,7 @@ public class PlayerManager : MonoBehaviour
                 position.y += playerSpeed;
                 this.transform.position = position;
             }
-        }
+        
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

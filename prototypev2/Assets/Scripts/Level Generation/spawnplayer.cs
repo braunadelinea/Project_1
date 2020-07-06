@@ -4,27 +4,60 @@ using UnityEngine;
 
 public class spawnplayer : MonoBehaviour
 {
-    public levelgen levelgen;
-    public GameObject player;
-    public LayerMask tile;
-    public static bool spawnedplayer;
-    
-    //NOTE: if changes propsed in levelgen.cs are made, this script will become obselete. 
+    private GameObject bossroom; 
+    private GameObject player;
+    private bool spawnedplayer;
+    private bool spawnedboss;
+    /* spawnplayer.cs 
+     * Written by: Toby Klauder 
+     * Last Edited 7/5/2020
+     * Spawns the player after the rooms have all spawned
+     * Change-Log: 
+     * Added Getters and Setters, overall simplifications
+     */
 
-    // Update is called once per frame
-    void Update()
+    //PRIVATE METHODS
+    private void Start()
     {
-        GameObject[] rooms = GameObject.FindGameObjectsWithTag("Room"); //get all rooms currently in the scene 
-        if (spawnedplayer == false && rooms.Length == 16) //once all rooms are generated, if we have not spawned the player, let's spawn the player 
+        bossroom = GameObject.FindGameObjectWithTag("boss");
+        player = GameObject.FindGameObjectWithTag("player"); 
+    }
+    // Update is called once per frame
+    private void Update()
+    {
+        GameObject[] rooms = GameObject.FindGameObjectsWithTag("Room"); 
+        if (GetSpawnedPlayer() == false && rooms.Length == 16) 
         {
             int rand = Random.Range(0, rooms.Length); //pick a room, any room 
-            Collider2D checkspawn = Physics2D.OverlapCircle(rooms[rand].transform.position, 1, tile); //throw a "scout" into where the player would spawn. 
+            Collider2D checkspawn = Physics2D.OverlapCircle(rooms[rand].transform.position, 1, 9); //throw a "scout" into where the player would spawn. 
             if (checkspawn == null) //if no collision is detected
             {
                 player.transform.position = rooms[rand].transform.position; //create the player 
-                spawnedplayer = true; //no need to spawn the player anymore 
+                SetSpawnedPlayer(true); //no need to spawn the player anymore 
             }
+        }
+        if (GetSpawnedPlayer() && spawnedboss == false) {
+            int rand = Random.Range(0, rooms.Length); // pick a random room 
+            if (Vector2.Distance(player.transform.position, rooms[rand].transform.position) > 20) {
+                Destroy(rooms[rand]);
+                bossroom.transform.position = rooms[rand].transform.position;
+                spawnedboss = true;
+            }
+       
         }
         
     }
+
+    //GETTER METHODS
+
+    public bool GetSpawnedPlayer() {
+        return spawnedplayer; 
+    }
+
+    //SETTER METHODS
+
+    public void SetSpawnedPlayer(bool newspawnedplayer) {
+        spawnedplayer = newspawnedplayer; 
+    }
+
 }
