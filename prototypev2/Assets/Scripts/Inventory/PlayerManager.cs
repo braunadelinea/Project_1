@@ -16,6 +16,7 @@ public class PlayerManager : MonoBehaviour
     private Weapon equipedWeapon;
 
     private float playerSpeed;
+    private GameObject currentItemCollision;
 
     //---- METHODS ----//
 
@@ -24,9 +25,18 @@ public class PlayerManager : MonoBehaviour
         currentHealth = 5;
         maxHealth = 5;
         balance = 10;
-        inventory = new Inventory();
+        inventory = gameObject.GetComponent<Inventory>();
         equipedWeapon = Weapon.Sword;
         playerSpeed = 0.2f;
+    }
+
+    void Update()
+    {
+        if (currentItemCollision != null && Input.GetKeyDown(KeyCode.E))
+        {
+            Debug.Log("Picking up item");
+            PickUpItem(currentItemCollision.gameObject.GetComponent<Item>());
+        }
     }
 
     void FixedUpdate()
@@ -34,28 +44,27 @@ public class PlayerManager : MonoBehaviour
         Vector3 cameraPosition = /*currentroom.*/transform.position;
         cameraPosition.z -= 10;
 
-            Vector3 position = this.transform.position;
-            if (Input.GetKey(KeyCode.A))
-            {
-                position.x -= playerSpeed;
-                this.transform.position = position;
-            }
-            else if (Input.GetKey(KeyCode.D))
-            {
-                position.x += playerSpeed;
-                this.transform.position = position;
-            }
-            else if (Input.GetKey(KeyCode.S))
-            {
-                position.y -= playerSpeed;
-                this.transform.position = position;
-            }
-            else if (Input.GetKey(KeyCode.W))
-            {
-                position.y += playerSpeed;
-                this.transform.position = position;
-            }
-        
+        Vector3 position = this.transform.position;
+        if (Input.GetKey(KeyCode.A))
+        {
+            position.x -= playerSpeed;
+            this.transform.position = position;
+        }
+        else if (Input.GetKey(KeyCode.D))
+        {
+            position.x += playerSpeed;
+            this.transform.position = position;
+        }
+        else if (Input.GetKey(KeyCode.S))
+        {
+            position.y -= playerSpeed;
+            this.transform.position = position;
+        }
+        else if (Input.GetKey(KeyCode.W))
+        {
+            position.y += playerSpeed;
+            this.transform.position = position;
+        }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -63,6 +72,20 @@ public class PlayerManager : MonoBehaviour
         {
             Debug.Log("Successfully Detected Room Collision");
             //currentroom = collision.gameObject;
+        }
+        else if (collision.CompareTag("Item"))
+        {
+            Debug.Log("Successfully Detected Item Collision");
+            currentItemCollision = collision.gameObject;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Item"))
+        {
+            Debug.Log("Item No Longer Colliding With Player");
+            currentItemCollision = null;
         }
     }
 
@@ -98,6 +121,7 @@ public class PlayerManager : MonoBehaviour
 
     public Item PickUpItem(Item item)
     {
+        Debug.Log("Entered PlayerManager.PickUpItem script");
         if (item.GetType() == Item.ItemType.Heart)
         {
             IncreaseHealth(1);

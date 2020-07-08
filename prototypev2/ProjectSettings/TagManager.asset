@@ -9,6 +9,7 @@ TagManager:
   - Tile
   - BossRoom
   - boss
+  - Item
   layers:
   - Default
   - TransparentFX

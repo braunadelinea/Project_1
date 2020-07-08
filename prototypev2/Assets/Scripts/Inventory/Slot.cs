@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Slot : MonoBehaviour
 {
@@ -16,6 +17,16 @@ public class Slot : MonoBehaviour
         slot = gameObject;
     }
 
+    public bool isEmpty()
+    {
+        return item == null;
+    }
+
+    public void Click()
+    {
+        GameObject.FindObjectOfType<Inventory>().HandleSlotClick(this);
+    }
+
     //---- GETTER METHODS ----//
 
     public Item GetItem()
@@ -23,11 +34,26 @@ public class Slot : MonoBehaviour
         return item;
     }
 
-    public void SetItem(Item newItem)
+    public Item SetItem(Item newItem)
     {
-        if (item != null)
+        Item temp = item;
+        item = newItem;
+        if(item == null)
         {
-            Debug.Log("ERROR: Item attempted to be placed in occupied slot");
+            slot.gameObject.GetComponent<Image>().sprite = null;
+            return null;
         }
+        item.transform.SetParent(slot.gameObject.transform);
+        item.transform.localPosition = new Vector3(0,0);
+        item.gameObject.SetActive(false);
+        slot.gameObject.GetComponent<Image>().sprite = item.GetSprite();
+        return temp;
+    }
+
+    //---- SETTER METHODS ----//
+
+    public void SetGameObject(GameObject gameObject)
+    {
+        slot = gameObject;
     }
 }
