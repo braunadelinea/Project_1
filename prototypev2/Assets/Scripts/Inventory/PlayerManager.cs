@@ -1,12 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerManager : MonoBehaviour
 {
     //---- MEMBER VARIABLES ----//
 
-    private int currentHealth;
+    private int currentHealth = 3;
     private int maxHealth;
 
     private int balance;
@@ -70,12 +71,10 @@ public class PlayerManager : MonoBehaviour
     {
         if (collision.CompareTag("Room"))
         {
-            Debug.Log("Successfully Detected Room Collision");
             //currentroom = collision.gameObject;
         }
         else if (collision.CompareTag("Item"))
         {
-            Debug.Log("Successfully Detected Item Collision");
             currentItemCollision = collision.gameObject;
         }
     }
@@ -84,7 +83,6 @@ public class PlayerManager : MonoBehaviour
     {
         if (collision.CompareTag("Item"))
         {
-            Debug.Log("Item No Longer Colliding With Player");
             currentItemCollision = null;
         }
     }
@@ -102,7 +100,16 @@ public class PlayerManager : MonoBehaviour
             currentHealth += increaseAmount;
         }
     }
-
+    public void DecreaseHealth(int decreaseAmount) {
+        if (currentHealth - decreaseAmount < 0)
+        {
+            //You ded.
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+        else {
+            currentHealth -= decreaseAmount; 
+        }
+    }
     public int AddToBalance(int increaseAmount)
     {
         balance += increaseAmount;

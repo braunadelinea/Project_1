@@ -10,6 +10,8 @@ TagManager:
   - BossRoom
   - boss
   - Item
+  - LevelGen
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -21,8 +23,8 @@ TagManager:
   - 
   - Room
   - Tile
-  - 
-  - 
+  - Boss
+  - Bullet
   - 
   - 
   - 

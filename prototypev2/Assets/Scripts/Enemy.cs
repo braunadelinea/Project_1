@@ -1,53 +1,50 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel.Design;
 using System.Numerics;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    private GameObject player; //we cannot make a new player, or get or set a new player, the player is the player, and that is why I had to take them from the scene.
-    private float counter; //changes in update, getters and setters not needed 
-    private float directionChangeTime = 3f; //getters and setters included, although not currently used as this value is not changed anywhere (yet) 
-    private float enemyvelocity = 2f; //getters and setters included, although not currently used as this value is not changed anywhere (yet)
-    private UnityEngine.Vector2 movementdirection; //getters and setters included, used. 
-    private UnityEngine.Vector2 movementperSecond; //calculated in the script based off variables that have getters and setters, so no need to get or set this.
-    private bool detectedplayer; //getters and setters included, used in script 
+    //TO-DO: Enemy attack (basic) [further attacks implemented in alpha or whatever the next phase is] 
+    private float attackcooldown = 1; 
+    private GameObject player;
+    private float counter;
+    private float directionChangeTime = 3f;
+    private float enemyvelocity = 2f;
+    private UnityEngine.Vector2 movementdirection;
+    private UnityEngine.Vector2 movementperSecond;
+    private bool detectedplayer;
+    private bool collisionimmenent;
 
 
     //PRIVATE METHODS 
     private void Start()
     {
-        player = GameObject.FindGameObjectWithTag("player"); 
+        player = GameObject.FindGameObjectWithTag("player");
         counter = 0f;
-        CalcMovementDir(); 
+        CalcMovementDir();
     }
 
-    private void CalcMovementDir()
+    private void CalcMovementDir() //checks if close to the player, then follows the player and if not, randomly walks around. 
     {
+
         //calculate a new movement vector with a magnitude of one, and later multiply this movement vector with the velocity of the enemy
         if (UnityEngine.Vector2.Distance(player.transform.position, this.transform.position) < 5)
         {
-            if (player.transform.position.x - this.transform.position.x > 1 & player.transform.position.x > this.transform.position.x)
+            SetMoveDir((player.transform.position - this.transform.position).normalized);
+            if (player.transform.position.x > this.transform.position.x)
             {
-                SetMoveDir(UnityEngine.Vector2.right);
+                //set sprite image to the right 
             }
-            else if (this.transform.position.x - player.transform.position.x > 1 &  this.transform.position.x > player.transform.position.x)
-            {
-                SetMoveDir(UnityEngine.Vector2.left);
-            }
-            else if (this.transform.position.y < player.transform.position.y)
-            {
-                SetMoveDir(UnityEngine.Vector2.up);
-            }
-            else if (this.transform.position.y > player.transform.position.y)
-            {
-                SetMoveDir(UnityEngine.Vector2.down);
+            else if (player.transform.position.x < this.transform.position.x) { 
+                //set sprite image to the left 
             }
         }
         else
         {
-            int dir = UnityEngine.Random.Range(0, 4);
+            int dir = UnityEngine.Random.Range(0, 5);
             switch (dir)
             {
                 case 0:
@@ -62,14 +59,17 @@ public class Enemy : MonoBehaviour
                 case 3:
                     SetMoveDir(UnityEngine.Vector2.down);
                     break;
+                case 4:
+                    SetMoveDir(UnityEngine.Vector2.zero);
+                    break; 
                 default:
                     Debug.Log("Error: Error Code 1, Enemy Move Speed Could Not be Properly Assigned.");
                     break;
 
             }
         }
-            movementperSecond = movementdirection * enemyvelocity;
-        
+        movementperSecond = movementdirection * enemyvelocity;
+
     }
 
     private void Update()
@@ -79,45 +79,152 @@ public class Enemy : MonoBehaviour
             SetPlayerDetected(true);
             CalcMovementDir();
         }
-        SetPlayerDetected(false);
+        else
+        {
+            SetPlayerDetected(false);
+        }
+        if (GetPlayerDetected() == true) {
+            Collider2D[] collider = Physics2D.OverlapCircleAll(this.transform.position, 2);
+            for (int i = 0; i < collider.Length; i++) {
+                if (collider[i].gameObject.CompareTag("player"))
+                {
+                    attackcooldown -= Time.deltaTime;
+                    if (attackcooldown < 0)
+                    {
+                        attackcooldown = 1;
+                        //play attack animation
+                        player.GetComponent<PlayerManager>().DecreaseHealth(1);
+                    }
+                }
+                else {
+                    attackcooldown = 1; 
+                }
+            }
+        }
+
+        if (GetMoveDir() == UnityEngine.Vector2.left)
+        {
+            UnityEngine.Vector3 pos = this.transform.position;
+            pos.x -= 1f;
+            Collider2D[] collider = Physics2D.OverlapCircleAll(pos, 1f);
+            for (int i = 0; i < collider.Length; i++)
+            {
+                if (collider[i].gameObject.CompareTag("Tile"))
+                {
+                    SetColImm(true);
+                }
+            }
+        }
+        else if (GetMoveDir() == UnityEngine.Vector2.right)
+        {
+            UnityEngine.Vector3 pos = this.transform.position;
+            pos.x += 1f;
+            Collider2D[] collider = Physics2D.OverlapCircleAll(pos, 1f);
+            for (int i = 0; i < collider.Length; i++)
+            {
+                if (collider[i].gameObject.CompareTag("Tile"))
+                {
+                    SetColImm(true);
+                }
+            }
+        }
+        else if (GetMoveDir() == UnityEngine.Vector2.up)
+        {
+            UnityEngine.Vector3 pos = this.transform.position;
+            pos.y += 1;
+            Collider2D[] collider = Physics2D.OverlapCircleAll(pos, 1f);
+            for (int i = 0; i < collider.Length; i++)
+            {
+                if (collider[i].gameObject.CompareTag("Tile"))
+                {
+                    SetColImm(true);
+                }
+            }
+        }
+        else if (GetMoveDir() == UnityEngine.Vector2.down)
+        {
+            UnityEngine.Vector3 pos = this.transform.position;
+            pos.y -= 1;
+            Collider2D[] collider = Physics2D.OverlapCircleAll(pos, 1f);
+            for (int i = 0; i < collider.Length; i++)
+            {
+                if (collider[i].gameObject.CompareTag("Tile"))
+                {
+                    SetColImm(true);
+                }
+            }
+        }
+
+        if (GetColImm())
+        {
+            CalcMovementDir();
+            SetColImm(false);
+        }
+
         counter += Time.deltaTime;
         if (counter > directionChangeTime)
         {
-          counter = 0;
-          CalcMovementDir();
+            counter = 0;
+            CalcMovementDir();
         }
-        
-            transform.position = new UnityEngine.Vector2(transform.position.x + (movementperSecond.x * Time.deltaTime), transform.position.y + (movementperSecond.y * Time.deltaTime));
-        
+
+        transform.position = new UnityEngine.Vector2(transform.position.x + (movementperSecond.x * Time.deltaTime), transform.position.y + (movementperSecond.y * Time.deltaTime));
+
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    //NOTE - gizmos for test purposes only 
+    private void OnDrawGizmos()
     {
-        if (collision.gameObject.CompareTag("Tile")) {
-            CalcMovementDir(); 
+        if (GetMoveDir() == UnityEngine.Vector2.left)
+        {
+            UnityEngine.Vector3 pos = this.transform.position;
+            pos.x -= 1;
+            Gizmos.DrawWireSphere(pos, 1f);
+        }
+        else if (GetMoveDir() == UnityEngine.Vector2.right)
+        {
+            UnityEngine.Vector3 pos = this.transform.position;
+            pos.x += 1;
+            Gizmos.DrawWireSphere(pos, 1f);
+        }
+        else if (GetMoveDir() == UnityEngine.Vector2.down)
+        {
+            UnityEngine.Vector3 pos = this.transform.position;
+            pos.y -= 1;
+            Gizmos.DrawWireSphere(pos, 1f);
+        }
+        else if (GetMoveDir() == UnityEngine.Vector2.up)
+        {
+            UnityEngine.Vector3 pos = this.transform.position;
+            pos.y += 1;
+            Gizmos.DrawWireSphere(pos, 1f);
         }
     }
-
     //GETTER METHODS 
 
-    public float GetDirChangeTime() 
+    public float GetDirChangeTime()
     {
-        return directionChangeTime; 
+        return directionChangeTime;
     }
 
     public float GetEnemyVelocity()
     {
-        return enemyvelocity; 
+        return enemyvelocity;
     }
 
-    public bool GetPlayerDetected() 
+    public bool GetPlayerDetected()
     {
-        return detectedplayer; 
+        return detectedplayer;
     }
 
-    public UnityEngine.Vector2 GetMoveDir() 
+    public UnityEngine.Vector2 GetMoveDir()
     {
-        return movementdirection; 
+        return movementdirection;
+    }
+
+    public bool GetColImm()
+    {
+        return collisionimmenent;
     }
     //SETTER METHODS 
 
@@ -126,17 +233,22 @@ public class Enemy : MonoBehaviour
         directionChangeTime = newdirchangetime;
     }
 
-    public void SetEnemyVelocity(float newenemyvelocity) 
+    public void SetEnemyVelocity(float newenemyvelocity)
     {
-        enemyvelocity = newenemyvelocity; 
+        enemyvelocity = newenemyvelocity;
     }
 
     public void SetPlayerDetected(bool newplayerdetected)
     {
-        detectedplayer = newplayerdetected; 
+        detectedplayer = newplayerdetected;
     }
 
-    public void SetMoveDir(UnityEngine.Vector2 newmovedir) {
-        movementdirection = newmovedir; 
+    public void SetMoveDir(UnityEngine.Vector2 newmovedir)
+    {
+        movementdirection = newmovedir;
+    }
+    public void SetColImm(bool newColImm)
+    {
+        collisionimmenent = newColImm;
     }
 }

@@ -677,7 +677,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objects:
-  - {fileID: 1700757060633225713, guid: 56bcd3cfab2310846b95d8c503c01dc6, type: 3}
+  - {fileID: 1700757060633225713, guid: ccc27e9f46b2ec64d9ebe57981f0f1e2, type: 3}
 --- !u!1 &1670001362595992107
 GameObject:
   m_ObjectHideFlags: 0
