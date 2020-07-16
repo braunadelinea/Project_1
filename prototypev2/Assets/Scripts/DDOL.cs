@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DDOL : MonoBehaviour
 {
@@ -8,5 +9,6 @@ public class DDOL : MonoBehaviour
     {
         DontDestroyOnLoad(gameObject);
         //Debug.Log("DDOL " + gameObject.name);
+        SceneManager.LoadScene("Dungeon", LoadSceneMode.Single);
     }
 }
