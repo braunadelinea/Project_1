@@ -9,6 +9,6 @@ public class DDOL : MonoBehaviour
     {
         DontDestroyOnLoad(gameObject);
         //Debug.Log("DDOL " + gameObject.name);
-        SceneManager.LoadScene("Dungeon", LoadSceneMode.Single);
+        SceneManager.LoadScene("Main Menu", LoadSceneMode.Single);
     }
 }

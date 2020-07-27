@@ -8,8 +8,13 @@ public class LoadScene : MonoBehaviour
     {
         SceneManager.LoadScene(1); 
     }
+    public void LoadCharacterSelect()
+    {
+        SceneManager.LoadScene(2);
+    }
     public void LoadGame()
     {
-        SceneManager.LoadScene(2); 
+        SceneManager.LoadScene(3); 
     }
+
 }
