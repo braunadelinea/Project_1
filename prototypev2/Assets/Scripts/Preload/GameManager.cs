@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public enum Element { Ice, Fire, Earth, Wind, Time, Devil}
@@ -10,7 +10,35 @@ public class GameManager : MonoBehaviour
     private bool[,] completion; //tracks which gods have been defeated in which timelines to save to file, used to render completion visuals and which boss is to be fought next
     private bool devilComplete = false;
     public float number = -34;
+    public int type; 
 
+    public void Update() {
+        if (GetCurrentElement() == Element.Ice)
+        {
+            type = 0;
+        }
+        else if (GetCurrentElement() == Element.Fire)
+        {
+            type = 1;
+        }
+        else if (GetCurrentElement() == Element.Earth)
+        {
+            type = 2;
+        }
+        else if (GetCurrentElement() == Element.Wind)
+        {
+            type = 3;
+        }
+        else if (GetCurrentElement() == Element.Time)
+        {
+            type = 4;
+        }
+        else if (GetCurrentElement() == Element.Devil) {
+            type = 5;
+        }
+
+
+    }
     void Awake()
     {
         completion = new bool[3,5]; //3 timelines, 5 gods to defeat in each timeline: order of gods -> Ice, Fire, Earth, Wind, Time
@@ -40,23 +68,27 @@ public class GameManager : MonoBehaviour
         {
             case Element.Ice:
                 currentDungeonElement = Element.Fire;
-                //TODO: Regenerate dungeon with fire element sprites
+                Scene scene = SceneManager.GetActiveScene();
+                SceneManager.LoadScene(scene.name);
                 break;
             case Element.Fire:
                 currentDungeonElement = Element.Earth;
-                //TODO: Regenerate dungeon with earth element sprites
+                Scene scenee = SceneManager.GetActiveScene();
+                SceneManager.LoadScene(scenee.name);
                 break;
             case Element.Earth:
                 currentDungeonElement = Element.Wind;
-                //TODO: Regenerate dungeon with wind element sprites
+                Scene sceneee = SceneManager.GetActiveScene();
+                SceneManager.LoadScene(sceneee.name);
                 break;
             case Element.Wind:
                 currentDungeonElement = Element.Time;
-                //TODO: Regenerate dungeon with time element sprites, boss room is instead a room with doors to each god
+                Scene sceneeee = SceneManager.GetActiveScene();
+                SceneManager.LoadScene(sceneeee.name);
                 break;
             case Element.Time:
                 currentDungeonElement = GetNextBossElement();
-                //TODO: Generate a single room with correct element sprites and the god of that element
+                SceneManager.LoadScene(4);
                 break;
             case Element.Devil:
                 Debug.Log("ERROR: Devil is defeated and game is complete, there is no next element");

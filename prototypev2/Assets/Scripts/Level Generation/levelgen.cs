@@ -8,9 +8,15 @@ public class levelgen : MonoBehaviour
        Player currently spawns in random room, make the player spawn at the start of the generated "path" (there will always be a walkable path from start to end point) by ensuring the room at the start of the generated path does not have any tiles in the center. A possible way this could be achieved is by adding all rooms to an array as they are created, putting the rooms that make up the path in order, then swap the first room in that array with an empty LRTB (all four doors open) room and place the player inside of it.   
     */
 
-
     public Transform[] startingPositions;
-    public GameObject[] rooms; // index 0-left and right 1--left right and bottom 2--left right top and 3 all four 
+    public GameObject[] rooms; // index 0-left and right 1--left right and bottom 2--left right top and 3 all four [placeholder so game is runnable until we get other rooms in]
+    public GameObject[] icerooms;// index 0-left and right 1--left right and bottom 2--left right top and 3 all four 
+    public GameObject[] firerooms;// index 0-left and right 1--left right and bottom 2--left right top and 3 all four 
+    public GameObject[] earthrooms;// index 0-left and right 1--left right and bottom 2--left right top and 3 all four 
+    public GameObject[] windrooms;// index 0-left and right 1--left right and bottom 2--left right top and 3 all four 
+    public GameObject[] timerooms;// index 0-left and right 1--left right and bottom 2--left right top and 3 all four 
+    public GameObject[] devilrooms;// index 0-left and right 1--left right and bottom 2--left right top and 3 all four 
+    public GameObject[] currentroomset;
 
     private int direction; // direction in which the next room will spawn 
     public float moveAmount = 10; //each room is equally spaced apart 
@@ -31,9 +37,35 @@ public class levelgen : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (GameObject.FindGameObjectWithTag("Manager").GetComponent<GameManager>().type == 0)
+        {
+            currentroomset = icerooms;
+        }
+        else if (GameObject.FindGameObjectWithTag("Manager").GetComponent<GameManager>().type == 1)
+        {
+            currentroomset = firerooms;
+        }
+        else if (GameObject.FindGameObjectWithTag("Manager").GetComponent<GameManager>().type == 2)
+        {
+            currentroomset = earthrooms;
+        }
+        else if (GameObject.FindGameObjectWithTag("Manager").GetComponent<GameManager>().type == 3)
+        {
+            currentroomset = windrooms;
+        }
+        else if (GameObject.FindGameObjectWithTag("Manager").GetComponent<GameManager>().type == 4)
+        {
+            currentroomset = timerooms;
+        }
+        else if (GameObject.FindGameObjectWithTag("Manager").GetComponent<GameManager>().type == 5)
+        {
+            currentroomset = devilrooms;
+        }
+
         int randStartingPos = Random.Range(0, startingPositions.Length); //there are 4 starting positions for the "main" path, the top four Poses.
         transform.position = startingPositions[randStartingPos].position; //The position of the level generation object is set to the position of the random starting position we chose.
-        Instantiate(rooms[0], transform.position, Quaternion.identity); //spawns a left right room prefab at the starting position so the generator can begin to branch, this sometimes is deleted and overwritten to meet other cases. 
+        
+        Instantiate(currentroomset[0], transform.position, Quaternion.identity); //spawns a left right room prefab at the starting position so the generator can begin to branch, this sometimes is deleted and overwritten to meet other cases. 
 
         direction = Random.Range(1, 6); //what direction the generator will move 
     }
@@ -50,8 +82,8 @@ public class levelgen : MonoBehaviour
 
                 transform.position = newPos; //actually move the level generator to the previously defined position. 
 
-                int rand = Random.Range(0, rooms.Length); //choose a random room type either LR, LRB, LRT, or LRTB
-                Instantiate(rooms[rand], transform.position, Quaternion.identity); //create that room at our new position. 
+                int rand = Random.Range(0, currentroomset.Length); //choose a random room type either LR, LRB, LRT, or LRTB
+                Instantiate(currentroomset[rand], transform.position, Quaternion.identity); //create that room at our new position. 
 
                 direction = Random.Range(1, 6); //choose the next direction to move 
 
@@ -77,8 +109,8 @@ public class levelgen : MonoBehaviour
 
                 transform.position = newPos; //actually move the level generator 
 
-                int rand = Random.Range(0, rooms.Length); //get a random room prefab
-                Instantiate(rooms[rand], transform.position, Quaternion.identity); //create whichever prefab we chose
+                int rand = Random.Range(0, currentroomset.Length); //get a random room prefab
+                Instantiate(currentroomset[rand], transform.position, Quaternion.identity); //create whichever prefab we chose
 
                 direction = Random.Range(3, 6); //get a new direction, but exclude 1 and 2, because we just came from the right 
             }
@@ -99,7 +131,7 @@ public class levelgen : MonoBehaviour
                     if (downcounter >= 2) //if we have moved down twice (the dreaded bug) 
                     {
                         roomdetection.GetComponent<scoutroom>().RoomDestruction(); //destroy the current room 
-                        Instantiate(rooms[3], transform.position, Quaternion.identity); //create a room with all four doors open, ensuring the bug blocking the path will not occur 
+                        Instantiate(currentroomset[3], transform.position, Quaternion.identity); //create a room with all four doors open, ensuring the bug blocking the path will not occur 
                     }
                     else //if we have not moved down 2 times
                     {
@@ -111,7 +143,7 @@ public class levelgen : MonoBehaviour
                         {
                             randbottomroom = 1;
                         }
-                        Instantiate(rooms[randbottomroom], transform.position, Quaternion.identity); //create the room 
+                        Instantiate(currentroomset[randbottomroom], transform.position, Quaternion.identity); //create the room 
                     }
                 }
 
@@ -120,7 +152,7 @@ public class levelgen : MonoBehaviour
                 transform.position = newPos; //actually move the level generator 
 
                 int rand = Random.Range(2, 4); //get a random room typed 2 or 3 (rooms with top openings since we just moved down) 
-                Instantiate(rooms[rand], transform.position, Quaternion.identity); //create that room 
+                Instantiate(currentroomset[rand], transform.position, Quaternion.identity); //create that room 
 
                 direction = Random.Range(1, 6); //figure out where to move next, we cannot move up, so anything is game 
             }
@@ -134,6 +166,32 @@ public class levelgen : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (GameObject.FindGameObjectWithTag("Manager").GetComponent<GameManager>().type == 0)
+        {
+            currentroomset = icerooms;
+        }
+        else if (GameObject.FindGameObjectWithTag("Manager").GetComponent<GameManager>().type == 1)
+        {
+            currentroomset = firerooms;
+        }
+        else if (GameObject.FindGameObjectWithTag("Manager").GetComponent<GameManager>().type == 2)
+        {
+            currentroomset = earthrooms;
+        }
+        else if (GameObject.FindGameObjectWithTag("Manager").GetComponent<GameManager>().type == 3)
+        {
+            currentroomset = windrooms;
+        }
+        else if (GameObject.FindGameObjectWithTag("Manager").GetComponent<GameManager>().type == 4)
+        {
+            currentroomset = timerooms;
+        }
+        else if (GameObject.FindGameObjectWithTag("Manager").GetComponent<GameManager>().type == 5) {
+            currentroomset = devilrooms; 
+        }
+
+
+
         if (timebtwroom <= 0 && stopgen == false) //if there are rooms to generate and the time between each room is up, let's move, create a room and restart the timer. 
         {
             Move();
