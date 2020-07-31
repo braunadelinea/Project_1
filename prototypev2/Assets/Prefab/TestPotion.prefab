@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4624292768295543901}
   - component: {fileID: 4078894766831662754}
   m_Layer: 0
-  m_Name: testitem
+  m_Name: TestPotion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -72,7 +72,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 735854461f9816349b18153553fae5d6, type: 3}
+  m_Sprite: {fileID: -1643389817789898457, guid: 569b06b1b4a88aa4aaf28811f3b761bf,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -100,7 +101,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.75, y: 3.75}
+    oldSize: {x: 2.56, y: 2.56}
     newSize: {x: 3.75, y: 3.75}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

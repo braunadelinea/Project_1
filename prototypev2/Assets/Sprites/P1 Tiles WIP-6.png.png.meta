@@ -1,0 +1,542 @@
+fileFormatVersion: 2
+guid: 5752dbbef44547b4093974ffe155ad58
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 393447071071325589
+    second: Rock5
+  - first:
+      213: -1580858366981570022
+    second: Rock1
+  - first:
+      213: -8530977644307169071
+    second: Rock2
+  - first:
+      213: -5398597655049655484
+    second: Rock6
+  - first:
+      213: -3900789198392328403
+    second: Rock3
+  - first:
+      213: -1827280382487478282
+    second: Rock4
+  - first:
+      213: 4402552675580629633
+    second: P1 Tiles WIP-6.png_6
+  - first:
+      213: 2175115154786760767
+    second: P1 Tiles WIP-6.png_7
+  - first:
+      213: -6185603070566635896
+    second: P1 Tiles WIP-6.png_8
+  - first:
+      213: -2957058789619439463
+    second: P1 Tiles WIP-6.png_9
+  - first:
+      213: -5732041644837909648
+    second: P1 Tiles WIP-6.png_10
+  - first:
+      213: 2323828252233865479
+    second: P1 Tiles WIP-6.png_11
+  - first:
+      213: -4884011903559323486
+    second: P1 Tiles WIP-6.png_12
+  - first:
+      213: 8679669249996216395
+    second: P1 Tiles WIP-6.png_13
+  - first:
+      213: 9150682407731686260
+    second: P1 Tiles WIP-6.png_14
+  - first:
+      213: -3414988373883040713
+    second: P1 Tiles WIP-6.png_15
+  - first:
+      213: -116792595502548300
+    second: P1 Tiles WIP-6.png_16
+  - first:
+      213: -3816822367786427223
+    second: P1 Tiles WIP-6.png_17
+  - first:
+      213: 5486057118148369197
+    second: P1 Tiles WIP-6.png_18
+  - first:
+      213: 2911839174119075321
+    second: P1 Tiles WIP-6.png_19
+  - first:
+      213: 7571158317335824710
+    second: P1 Tiles WIP-6.png_20
+  - first:
+      213: 1758931211546198252
+    second: P1 Tiles WIP-6.png_21
+  - first:
+      213: 7819114025898872577
+    second: P1 Tiles WIP-6.png_22
+  - first:
+      213: 340024046877581047
+    second: P1 Tiles WIP-6.png_23
+  - first:
+      213: 2321893832249812898
+    second: P1 Tiles WIP-6.png_24
+  - first:
+      213: -6326824400269095042
+    second: P1 Tiles WIP-6.png_25
+  - first:
+      213: 7506242179848811015
+    second: P1 Tiles WIP-6.png_26
+  - first:
+      213: 2580071820975911601
+    second: P1 Tiles WIP-6.png_27
+  - first:
+      213: -6534353157778094898
+    second: P1 Tiles WIP-6.png_28
+  - first:
+      213: -8886374307737028554
+    second: P1 Tiles WIP-6.png_29
+  - first:
+      213: 4635004141785040978
+    second: P1 Tiles WIP-6.png_30
+  - first:
+      213: -6952024429561015304
+    second: P1 Tiles WIP-6.png_31
+  - first:
+      213: -7521377752947877618
+    second: P1 Tiles WIP-6.png_32
+  - first:
+      213: 3390761643181977937
+    second: P1 Tiles WIP-6.png_33
+  - first:
+      213: 3666236844466877265
+    second: P1 Tiles WIP-6.png_34
+  - first:
+      213: 9156799631622462903
+    second: P1 Tiles WIP-6.png_35
+  - first:
+      213: 6069641146619411439
+    second: P1 Tiles WIP-6.png_36
+  - first:
+      213: -6428269899210156765
+    second: P1 Tiles WIP-6.png_37
+  - first:
+      213: 7791212850375805163
+    second: P1 Tiles WIP-6.png_38
+  - first:
+      213: 6721671263199406013
+    second: P1 Tiles WIP-6.png_39
+  - first:
+      213: 3948491021243272764
+    second: P1 Tiles WIP-6.png_40
+  - first:
+      213: 6300012707325374365
+    second: P1 Tiles WIP-6.png_41
+  - first:
+      213: -8098882059974700456
+    second: P1 Tiles WIP-6.png_42
+  - first:
+      213: 7039577180590384220
+    second: P1 Tiles WIP-6.png_43
+  - first:
+      213: 8971060016338487546
+    second: P1 Tiles WIP-6.png_44
+  - first:
+      213: 859579685881875199
+    second: P1 Tiles WIP-6.png_45
+  - first:
+      213: -2397636030832682584
+    second: P1 Tiles WIP-6.png_46
+  - first:
+      213: 1460683588215570291
+    second: P1 Tiles WIP-6.png_47
+  - first:
+      213: -5910458035237729707
+    second: P1 Tiles WIP-6.png_48
+  - first:
+      213: -1094810816708069982
+    second: P1 Tiles WIP-6.png_49
+  - first:
+      213: -4030248895666720225
+    second: P1 Tiles WIP-6.png_50
+  - first:
+      213: 2853251064799313776
+    second: P1 Tiles WIP-6.png_51
+  - first:
+      213: -5086471989214614892
+    second: P1 Tiles WIP-6.png_52
+  - first:
+      213: -7810700139613243971
+    second: P1 Tiles WIP-6.png_53
+  - first:
+      213: 2493184240141768211
+    second: P1 Tiles WIP-6.png_54
+  - first:
+      213: -8051991070212806182
+    second: P1 Tiles WIP-6.png_55
+  - first:
+      213: -3466647929493939661
+    second: P1 Tiles WIP-6.png_56
+  - first:
+      213: 1767452581664114431
+    second: P1 Tiles WIP-6.png_57
+  - first:
+      213: -3603578412720161872
+    second: P1 Tiles WIP-6.png_58
+  - first:
+      213: 2653606879140734627
+    second: P1 Tiles WIP-6.png_59
+  - first:
+      213: 3447872670106188052
+    second: P1 Tiles WIP-6.png_60
+  - first:
+      213: -2421175586872837934
+    second: P1 Tiles WIP-6.png_61
+  - first:
+      213: -6509567838252039632
+    second: P1 Tiles WIP-6.png_62
+  - first:
+      213: 6156608925500789877
+    second: P1 Tiles WIP-6.png_63
+  - first:
+      213: -7344164624497241833
+    second: P1 Tiles WIP-6.png_64
+  - first:
+      213: -7189466827291991127
+    second: P1 Tiles WIP-6.png_65
+  - first:
+      213: -7939058751240762095
+    second: P1 Tiles WIP-6.png_66
+  - first:
+      213: 8432030519319905104
+    second: P1 Tiles WIP-6.png_67
+  - first:
+      213: 4040277012949263050
+    second: P1 Tiles WIP-6.png_68
+  - first:
+      213: -6742562036242255085
+    second: P1 Tiles WIP-6.png_69
+  - first:
+      213: 2816907073466318539
+    second: P1 Tiles WIP-6.png_70
+  - first:
+      213: 407805350556471117
+    second: P1 Tiles WIP-6.png_71
+  - first:
+      213: -8731619204542747200
+    second: P1 Tiles WIP-6.png_72
+  - first:
+      213: -5356159622628882818
+    second: P1 Tiles WIP-6.png_73
+  - first:
+      213: -3809342646841514639
+    second: P1 Tiles WIP-6.png_74
+  - first:
+      213: -2085447041389075055
+    second: P1 Tiles WIP-6.png_75
+  - first:
+      213: 7291725160576835956
+    second: P1 Tiles WIP-6.png_76
+  - first:
+      213: 3741774043586622104
+    second: P1 Tiles WIP-6.png_77
+  - first:
+      213: 1555908307302915221
+    second: P1 Tiles WIP-6.png_78
+  - first:
+      213: -4126559835892197447
+    second: P1 Tiles WIP-6.png_79
+  - first:
+      213: -3302195501138274611
+    second: P1 Tiles WIP-6.png_80
+  - first:
+      213: -4760695112263707771
+    second: P1 Tiles WIP-6.png_81
+  - first:
+      213: -7883062993456660898
+    second: P1 Tiles WIP-6.png_82
+  - first:
+      213: 3074654975671223777
+    second: P1 Tiles WIP-6.png_83
+  - first:
+      213: -8874736150522701157
+    second: P1 Tiles WIP-6.png_84
+  - first:
+      213: -3614696196425285076
+    second: P1 Tiles WIP-6.png_85
+  - first:
+      213: -2780634923302284846
+    second: P1 Tiles WIP-6.png_86
+  - first:
+      213: -1881413499574993205
+    second: P1 Tiles WIP-6.png_87
+  - first:
+      213: 3127548966870340158
+    second: P1 Tiles WIP-6.png_88
+  - first:
+      213: 8302248083900760
+    second: P1 Tiles WIP-6.png_89
+  - first:
+      213: 2344020220714589679
+    second: P1 Tiles WIP-6.png_90
+  - first:
+      213: 5215511183148903895
+    second: P1 Tiles WIP-6.png_91
+  - first:
+      213: 2838900500380927845
+    second: P1 Tiles WIP-6.png_92
+  - first:
+      213: 183752722921835344
+    second: P1 Tiles WIP-6.png_93
+  - first:
+      213: -7277198741931906511
+    second: P1 Tiles WIP-6.png_94
+  - first:
+      213: 4420504750327176238
+    second: P1 Tiles WIP-6.png_95
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Rock5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59dcf1dc60ec57500800000000000000
+      internalID: 393447071071325589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rock1
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a120cd3e0b9af0ae0800000000000000
+      internalID: -1580858366981570022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rock2
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d0c5441801eb9980800000000000000
+      internalID: -8530977644307169071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rock6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44b228529045415b0800000000000000
+      internalID: -5398597655049655484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rock3
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2ff42e24ec9dd9c0800000000000000
+      internalID: -3900789198392328403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rock4
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ff3bc86c2234a6e0800000000000000
+      internalID: -1827280382487478282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
