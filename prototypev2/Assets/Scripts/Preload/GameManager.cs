@@ -13,6 +13,9 @@ public class GameManager : MonoBehaviour
     public int type; 
 
     public void Update() {
+        if (Input.GetKeyDown(KeyCode.Escape)) {
+            GoToNextDungeon();
+        }
         if (GetCurrentElement() == Element.Ice)
         {
             type = 0;

@@ -43,7 +43,10 @@ public class BossLogic : MonoBehaviour
             attack = Random.Range(0, 2); 
             counter = 0;
         }
-             
-    }
 
+        if (health <= 0) {
+            Destroy(this.gameObject);
+            GameObject.FindGameObjectWithTag("Manager").GetComponent<GameManager>().GoToNextDungeon(); 
+        }
+    }
 }

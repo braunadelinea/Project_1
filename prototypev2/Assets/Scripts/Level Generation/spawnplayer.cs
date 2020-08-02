@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class spawnplayer : MonoBehaviour
 {
-    private GameObject bossroom; 
+    private GameObject boss; 
     private GameObject player;
     private bool spawnedplayer;
     private bool spawnedboss;
@@ -19,7 +19,7 @@ public class spawnplayer : MonoBehaviour
     //PRIVATE METHODS
     private void Start()
     {
-        bossroom = GameObject.FindGameObjectWithTag("boss");
+        boss = GameObject.FindGameObjectWithTag("boss");
         player = GameObject.FindGameObjectWithTag("player"); 
     }
     // Update is called once per frame
@@ -44,8 +44,7 @@ public class spawnplayer : MonoBehaviour
         if (GetSpawnedPlayer() && spawnedboss == false) {
             int rand = Random.Range(0, rooms.Length); // pick a random room 
             if (Vector2.Distance(player.transform.position, rooms[rand].transform.position) > 20) {
-                Destroy(rooms[rand]);
-                bossroom.transform.position = rooms[rand].transform.position;
+                boss.transform.position = rooms[rand].transform.position;
                 spawnedboss = true;
             }
        
