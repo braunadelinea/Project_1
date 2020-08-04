@@ -9,7 +9,7 @@ public class PlayerManager : MonoBehaviour
 
     private int currentHealth = 3;
     private int maxHealth;
-
+    public GameObject currentroom;
     private int balance;
 
     private Inventory inventory;
@@ -42,7 +42,7 @@ public class PlayerManager : MonoBehaviour
 
     void FixedUpdate()
     {
-        Vector3 cameraPosition = /*currentroom.*/transform.position;
+        Vector3 cameraPosition = currentroom.transform.position;
         cameraPosition.z -= 10;
 
         Vector3 position = this.transform.position;
@@ -71,7 +71,7 @@ public class PlayerManager : MonoBehaviour
     {
         if (collision.CompareTag("Room"))
         {
-            //currentroom = collision.gameObject;
+            currentroom = collision.gameObject;
         }
         else if (collision.CompareTag("Item"))
         {
