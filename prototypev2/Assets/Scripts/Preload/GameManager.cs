@@ -44,12 +44,12 @@ public class GameManager : MonoBehaviour
     }
     void Awake()
     {
+        
         completion = new bool[3,5]; //3 timelines, 5 gods to defeat in each timeline: order of gods -> Ice, Fire, Earth, Wind, Time
         print("Setting test completion");
         completion[0, 3] = true;
         completion[1, 2] = true;
     }
-
 
     public void Save()
     {

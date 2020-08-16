@@ -27,6 +27,7 @@ public class Inventory : MonoBehaviour
             backpack.Add(slot);
         }
         Debug.Log("Backpack size: " + backpack.Count);
+        backpackPanel.SetActive(false);
     }
 
     void Update()

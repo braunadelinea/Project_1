@@ -2,266 +2,179 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel.Design;
-using System.Numerics;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    private GameObject currentroom; 
-    //TO-DO: Enemy attack (basic) [further attacks implemented in alpha or whatever the next phase is] 
-    private float attackcooldown = 1; 
+    private GameObject currentroom;
     private GameObject player;
-    private float counter;
-    private float directionChangeTime = 3f;
-    private float enemyvelocity = 2f;
-    private UnityEngine.Vector2 movementdirection;
-    private UnityEngine.Vector2 movementperSecond;
-    private bool detectedplayer;
-    private bool collisionimmenent;
 
+    public enum Phase { Idle, Wander, Chase, Attack};
+    private Phase currentPhase = Phase.Idle;
+    private float phaseStartTime;
+
+    private const float idleLength = 1;
+
+    private const float wanderLength = 2;
+
+    private const float startChaseDistance = 3;
+    private const float stopChaseDistance = 4;
+
+    private const float startAttackDistance = 1.2f;
+    private const float stopAttackDistance = 2;
+    private const float attackInterval = 1;
+    private float lastAttackTime;
+
+    private float speed = 0.05f;
+    private Vector3 movementDirection;
 
     //PRIVATE METHODS 
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("player");
-        counter = 0f;
-        CalcMovementDir();
+        phaseStartTime = Time.time;
+        
     }
 
-    private void CalcMovementDir() //checks if close to the player, then follows the player and if not, randomly walks around. 
-    {
-        if (currentroom == GameObject.FindGameObjectWithTag("player").GetComponent<PlayerManager>().currentroom)
-        {
-            //calculate a new movement vector with a magnitude of one, and later multiply this movement vector with the velocity of the enemy
-            if (UnityEngine.Vector2.Distance(player.transform.position, this.transform.position) < 5)
-            {
-                SetMoveDir((player.transform.position - this.transform.position).normalized);
-                if (player.transform.position.x > this.transform.position.x)
-                {
-                    //set sprite image to the right 
-                }
-                else if (player.transform.position.x < this.transform.position.x)
-                {
-                    //set sprite image to the left 
-                }
-            }
-            else
-            {
-                int dir = UnityEngine.Random.Range(0, 5);
-                switch (dir)
-                {
-                    case 0:
-                        SetMoveDir(UnityEngine.Vector2.left);
-                        break;
-                    case 1:
-                        SetMoveDir(UnityEngine.Vector2.up);
-                        break;
-                    case 2:
-                        SetMoveDir(UnityEngine.Vector2.right);
-                        break;
-                    case 3:
-                        SetMoveDir(UnityEngine.Vector2.down);
-                        break;
-                    case 4:
-                        SetMoveDir(UnityEngine.Vector2.zero);
-                        break;
-                    default:
-                        Debug.Log("Error: Error Code 1, Enemy Move Speed Could Not be Properly Assigned.");
-                        break;
-
-                }
-            }
-            movementperSecond = movementdirection * enemyvelocity;
-        }
-    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if(currentroom != null)
+        {
+            return;
+        }
         if (collision.gameObject.CompareTag("Room")) {
             currentroom = collision.gameObject;
+            Debug.Log("Entering New Room");
         }
     }
-    private void Update()
+    private void FixedUpdate()
     {
         if (currentroom == GameObject.FindGameObjectWithTag("player").GetComponent<PlayerManager>().currentroom)
         {
-            if (UnityEngine.Vector2.Distance(player.transform.position, this.transform.position) < 5)
-            {
-                SetPlayerDetected(true);
-                CalcMovementDir();
-            }
-            else
-            {
-                SetPlayerDetected(false);
-            }
-            if (GetPlayerDetected() == true)
-            {
-                Collider2D[] collider = Physics2D.OverlapCircleAll(this.transform.position, 2);
-                for (int i = 0; i < collider.Length; i++)
-                {
-                    if (collider[i].gameObject.CompareTag("player"))
-                    {
-                        attackcooldown -= Time.deltaTime;
-                        if (attackcooldown < 0)
-                        {
-                            attackcooldown = 1;
-                            //play attack animation
-                            player.GetComponent<PlayerManager>().DecreaseHealth(1);
-                        }
-                    }
-                    else
-                    {
-                        attackcooldown = 1;
-                    }
-                }
-            }
-
-            if (GetMoveDir() == UnityEngine.Vector2.left)
-            {
-                UnityEngine.Vector3 pos = this.transform.position;
-                pos.x -= 1f;
-                Collider2D[] collider = Physics2D.OverlapCircleAll(pos, 1f);
-                for (int i = 0; i < collider.Length; i++)
-                {
-                    if (collider[i].gameObject.CompareTag("Tile"))
-                    {
-                        SetColImm(true);
-                    }
-                }
-            }
-            else if (GetMoveDir() == UnityEngine.Vector2.right)
-            {
-                UnityEngine.Vector3 pos = this.transform.position;
-                pos.x += 1f;
-                Collider2D[] collider = Physics2D.OverlapCircleAll(pos, 1f);
-                for (int i = 0; i < collider.Length; i++)
-                {
-                    if (collider[i].gameObject.CompareTag("Tile"))
-                    {
-                        SetColImm(true);
-                    }
-                }
-            }
-            else if (GetMoveDir() == UnityEngine.Vector2.up)
-            {
-                UnityEngine.Vector3 pos = this.transform.position;
-                pos.y += 1;
-                Collider2D[] collider = Physics2D.OverlapCircleAll(pos, 1f);
-                for (int i = 0; i < collider.Length; i++)
-                {
-                    if (collider[i].gameObject.CompareTag("Tile"))
-                    {
-                        SetColImm(true);
-                    }
-                }
-            }
-            else if (GetMoveDir() == UnityEngine.Vector2.down)
-            {
-                UnityEngine.Vector3 pos = this.transform.position;
-                pos.y -= 1;
-                Collider2D[] collider = Physics2D.OverlapCircleAll(pos, 1f);
-                for (int i = 0; i < collider.Length; i++)
-                {
-                    if (collider[i].gameObject.CompareTag("Tile"))
-                    {
-                        SetColImm(true);
-                    }
-                }
-            }
-
-            if (GetColImm())
-            {
-                CalcMovementDir();
-                SetColImm(false);
-            }
-
-            counter += Time.deltaTime;
-            if (counter > directionChangeTime)
-            {
-                counter = 0;
-                CalcMovementDir();
-            }
-
-            transform.position = new UnityEngine.Vector2(transform.position.x + (movementperSecond.x * Time.deltaTime), transform.position.y + (movementperSecond.y * Time.deltaTime));
+            UpdatePhase();
+            ApplyPhase();
         }
     }
 
-    //NOTE - gizmos for test purposes only 
-    private void OnDrawGizmos()
+    private void UpdatePhase()
     {
-        if (GetMoveDir() == UnityEngine.Vector2.left)
+        float distanceToPlayer = Vector2.Distance(player.transform.position, this.transform.position);
+        Phase previousPhase = currentPhase;
+        //switch to correct phase
+        switch (currentPhase)
         {
-            UnityEngine.Vector3 pos = this.transform.position;
-            pos.x -= 1;
-            Gizmos.DrawWireSphere(pos, 1f);
+            //if currently idle: if in chase range, start chasing, else if time to wander, switch to wander
+            case Phase.Idle:
+                if (distanceToPlayer < startChaseDistance)
+                {
+                    currentPhase = Phase.Chase;
+                }
+                else if (Time.time >= phaseStartTime + idleLength)
+                {
+                    currentPhase = Phase.Wander;
+                }
+                break;
+            //if currently wandering: if in chase range, start chasing, else if time to idle, switch to idle
+            case Phase.Wander:
+                if (distanceToPlayer < startChaseDistance)
+                {
+                    currentPhase = Phase.Chase;
+                }
+                else if (Time.time >= phaseStartTime + wanderLength)
+                {
+                    currentPhase = Phase.Idle;
+                }
+                break;
+            //if currently chasing, then if out of chase range, switch to idle phase
+            case Phase.Chase:
+                if (distanceToPlayer > stopChaseDistance)
+                {
+                    currentPhase = Phase.Idle;
+                }
+                else if (distanceToPlayer < startAttackDistance)
+                {
+                    currentPhase = Phase.Attack;
+                    lastAttackTime = 0;
+                }
+                break;
+            //if currently attacking, then if out of range, go back to idle
+            case Phase.Attack:
+                if (distanceToPlayer > stopAttackDistance)
+                {
+                    currentPhase = Phase.Idle;
+                }
+                break;
         }
-        else if (GetMoveDir() == UnityEngine.Vector2.right)
+        if (previousPhase != currentPhase)
         {
-            UnityEngine.Vector3 pos = this.transform.position;
-            pos.x += 1;
-            Gizmos.DrawWireSphere(pos, 1f);
+            phaseStartTime = Time.time;
+            Debug.Log("Phase changed from " + previousPhase + " to " + currentPhase);
         }
-        else if (GetMoveDir() == UnityEngine.Vector2.down)
+    }
+
+    private void ApplyPhase()
+    {
+        //depending on what the current phase is, set things accordingly
+        switch (currentPhase)
         {
-            UnityEngine.Vector3 pos = this.transform.position;
-            pos.y -= 1;
-            Gizmos.DrawWireSphere(pos, 1f);
+            //if idle, leave update loop
+            case Phase.Idle:
+                ChangeMoveDir(Vector3.zero);
+                return;
+            //if wandering then if a direction has not been picked yet, set a random direction, then move
+            case Phase.Wander:
+                if (movementDirection == Vector3.zero)
+                {
+                    System.Random rand = new System.Random();
+                    ChangeMoveDir(new Vector3((float)rand.NextDouble() - 0.5f, (float)rand.NextDouble() - 0.5f).normalized);
+                }
+                ApplyMovement();
+                break;
+            //if chasing, recalculate direction towards player and move
+            case Phase.Chase:
+                ChangeMoveDir((player.transform.position - this.transform.position).normalized);
+                ApplyMovement();
+                break;
+            //if attacking, decrease health at the correct interval
+            case Phase.Attack:
+                if (Time.time > lastAttackTime + attackInterval)
+                {
+                    //play attack animation
+                    player.GetComponent<PlayerManager>().DecreaseHealth(1);
+                    lastAttackTime = Time.time;
+                }
+                break;
         }
-        else if (GetMoveDir() == UnityEngine.Vector2.up)
+    }
+
+    private void ApplyMovement()
+    {
+        if (movementDirection == Vector3.zero)
         {
-            UnityEngine.Vector3 pos = this.transform.position;
-            pos.y += 1;
-            Gizmos.DrawWireSphere(pos, 1f);
+            return;
         }
-    }
-    //GETTER METHODS 
-
-    public float GetDirChangeTime()
-    {
-        return directionChangeTime;
-    }
-
-    public float GetEnemyVelocity()
-    {
-        return enemyvelocity;
-    }
-
-    public bool GetPlayerDetected()
-    {
-        return detectedplayer;
-    }
-
-    public UnityEngine.Vector2 GetMoveDir()
-    {
-        return movementdirection;
+        Collider2D[] collisions = Physics2D.OverlapCircleAll(transform.position + movementDirection * speed, 0.5f);
+        foreach (Collider2D collider in collisions)
+        {
+            string tag = collider.gameObject.tag;
+            //stop if the enemy is close to a wall
+            if (tag == "player" || tag == "Wall")
+            {
+                ChangeMoveDir(Vector3.zero);
+                return;
+            }
+            else if (collider.gameObject != currentroom && tag == "Room")
+            {
+                ChangeMoveDir(Vector3.zero);
+                return;
+            }
+        }
+        transform.position += movementDirection * speed;
     }
 
-    public bool GetColImm()
+    private void ChangeMoveDir(Vector2 newDirection)
     {
-        return collisionimmenent;
-    }
-    //SETTER METHODS 
-
-    public void SetDirChangeTime(float newdirchangetime)
-    {
-        directionChangeTime = newdirchangetime;
-    }
-
-    public void SetEnemyVelocity(float newenemyvelocity)
-    {
-        enemyvelocity = newenemyvelocity;
-    }
-
-    public void SetPlayerDetected(bool newplayerdetected)
-    {
-        detectedplayer = newplayerdetected;
-    }
-
-    public void SetMoveDir(UnityEngine.Vector2 newmovedir)
-    {
-        movementdirection = newmovedir;
-    }
-    public void SetColImm(bool newColImm)
-    {
-        collisionimmenent = newColImm;
+        movementDirection = newDirection;
+        //TODO: update animation
     }
 }

@@ -13,6 +13,7 @@ TagManager:
   - LevelGen
   - Enemy
   - Manager
+  - Wall
   layers:
   - Default
   - TransparentFX

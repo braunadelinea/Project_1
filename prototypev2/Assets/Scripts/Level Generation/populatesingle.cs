@@ -26,69 +26,70 @@ public class populatesingle : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        GameManager gameManager = GameObject.FindGameObjectWithTag("Manager").GetComponent<GameManager>();
         if (spawn == 0)
         {
-           Instantiate(bosses[GameObject.FindGameObjectWithTag("Manager").GetComponent<GameManager>().type], this.transform.position, Quaternion.identity);
+           Instantiate(bosses[gameManager.type], this.transform.position, Quaternion.identity);
         }
         else if (spawn == 1)
         {
-           Instantiate(enemies[GameObject.FindGameObjectWithTag("Manager").GetComponent<GameManager>().type], this.transform.position, Quaternion.identity);
+           Instantiate(enemies[gameManager.type], this.transform.position, Quaternion.identity);
         }
         if (spawn == 2)
         {
-            Instantiate(cornerwalltiles[GameObject.FindGameObjectWithTag("Manager").GetComponent<GameManager>().type], this.transform.position, Quaternion.identity, this.transform);
+            Instantiate(cornerwalltiles[gameManager.type], this.transform.position, Quaternion.identity, this.transform);
         }
         else if (spawn == 3)
         {
-            Instantiate(leftwalltile[GameObject.FindGameObjectWithTag("Manager").GetComponent<GameManager>().type], this.transform.position, Quaternion.identity, this.transform);
+            Instantiate(leftwalltile[gameManager.type], this.transform.position, Quaternion.identity, this.transform);
         }
         else if (spawn == 4)
         {
-            Instantiate(rightwalltile[GameObject.FindGameObjectWithTag("Manager").GetComponent<GameManager>().type], this.transform.position, Quaternion.identity, this.transform);
+            Instantiate(rightwalltile[gameManager.type], this.transform.position, Quaternion.identity, this.transform);
         }
         else if (spawn == 5)
         {
-            Instantiate(floortile[GameObject.FindGameObjectWithTag("Manager").GetComponent<GameManager>().type], this.transform.position, Quaternion.identity, this.transform);
+            Instantiate(floortile[gameManager.type], this.transform.position, Quaternion.identity, this.transform);
         }
         else if (spawn == 6)
         {
-            Instantiate(topwalltile[GameObject.FindGameObjectWithTag("Manager").GetComponent<GameManager>().type], this.transform.position, Quaternion.identity, this.transform);
+            Instantiate(topwalltile[gameManager.type], this.transform.position, Quaternion.identity, this.transform);
         }
         else if (spawn == 7)
         {
-            Instantiate(bottomwalltile[GameObject.FindGameObjectWithTag("Manager").GetComponent<GameManager>().type], this.transform.position, Quaternion.identity, this.transform);
+            Instantiate(bottomwalltile[gameManager.type], this.transform.position, Quaternion.identity, this.transform);
         }
         else if (spawn == 8)
         {
-            Instantiate(rightbottomcornerfloor[GameObject.FindGameObjectWithTag("Manager").GetComponent<GameManager>().type], this.transform.position, Quaternion.identity, this.transform);
+            Instantiate(rightbottomcornerfloor[gameManager.type], this.transform.position, Quaternion.identity, this.transform);
         }
         else if (spawn == 9)
         {
-            Instantiate(leftbottomcornerfloor[GameObject.FindGameObjectWithTag("Manager").GetComponent<GameManager>().type], this.transform.position, Quaternion.identity, this.transform);
+            Instantiate(leftbottomcornerfloor[gameManager.type], this.transform.position, Quaternion.identity, this.transform);
         }
         else if (spawn == 10)
         {
-            Instantiate(righttopcornerfloor[GameObject.FindGameObjectWithTag("Manager").GetComponent<GameManager>().type], this.transform.position, Quaternion.identity, this.transform);
+            Instantiate(righttopcornerfloor[gameManager.type], this.transform.position, Quaternion.identity, this.transform);
         }
         else if (spawn == 11)
         {
-            Instantiate(lefttopcornerfloor[GameObject.FindGameObjectWithTag("Manager").GetComponent<GameManager>().type], this.transform.position, Quaternion.identity, this.transform);
+            Instantiate(lefttopcornerfloor[gameManager.type], this.transform.position, Quaternion.identity, this.transform);
         }
         else if (spawn == 12)
         {
-            Instantiate(topfloortile[GameObject.FindGameObjectWithTag("Manager").GetComponent<GameManager>().type], this.transform.position, Quaternion.identity, this.transform);
+            Instantiate(topfloortile[gameManager.type], this.transform.position, Quaternion.identity, this.transform);
         }
         else if (spawn == 13)
         {
-            Instantiate(rightfloortile[GameObject.FindGameObjectWithTag("Manager").GetComponent<GameManager>().type], this.transform.position, Quaternion.identity, this.transform);
+            Instantiate(rightfloortile[gameManager.type], this.transform.position, Quaternion.identity, this.transform);
         }
         else if (spawn == 14)
         {
-            Instantiate(leftfloortile[GameObject.FindGameObjectWithTag("Manager").GetComponent<GameManager>().type], this.transform.position, Quaternion.identity, this.transform);
+            Instantiate(leftfloortile[gameManager.type], this.transform.position, Quaternion.identity, this.transform);
         }
         else if (spawn == 15)
         {
-            Instantiate(bottomfloortile[GameObject.FindGameObjectWithTag("Manager").GetComponent<GameManager>().type], this.transform.position, Quaternion.identity, this.transform);
+            Instantiate(bottomfloortile[gameManager.type], this.transform.position, Quaternion.identity, this.transform);
         }
         else if (spawn == 16) {
             int spawnrock = Random.Range(0, 2);
@@ -96,10 +97,10 @@ public class populatesingle : MonoBehaviour
             {
                 int rand = Random.Range(0, rocks.Length);
                 Instantiate(rocks[rand], this.transform.position, Quaternion.identity, this.transform);
-                Instantiate(floortile[GameObject.FindGameObjectWithTag("Manager").GetComponent<GameManager>().type], this.transform.position, Quaternion.identity, this.transform);
+                Instantiate(floortile[gameManager.type], this.transform.position, Quaternion.identity, this.transform);
             }
             else {
-                Instantiate(floortile[GameObject.FindGameObjectWithTag("Manager").GetComponent<GameManager>().type], this.transform.position, Quaternion.identity, this.transform);
+                Instantiate(floortile[gameManager.type], this.transform.position, Quaternion.identity, this.transform);
             }
         }
     }

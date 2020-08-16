@@ -28,7 +28,7 @@ public class PlayerManager : MonoBehaviour
         balance = 10;
         inventory = gameObject.GetComponent<Inventory>();
         equipedWeapon = Weapon.Sword;
-        playerSpeed = 0.2f;
+        playerSpeed = 0.1f;
     }
 
     void Update()
@@ -42,31 +42,50 @@ public class PlayerManager : MonoBehaviour
 
     void FixedUpdate()
     {
-        Vector3 cameraPosition = currentroom.transform.position;
-        cameraPosition.z -= 10;
+        if(currentroom == null)
+        {
+            //don't update until currentroom is set
+            return;
+        }
+        //Vector3 cameraPosition = currentroom.transform.position;
+        //cameraPosition.z -= 10;
+        ApplyMovement();
+    }
 
-        Vector3 position = this.transform.position;
+    private void ApplyMovement()
+    {
+        Vector3 newPosition = this.transform.position;
+        Vector3 movementVector = Vector3.zero;
         if (Input.GetKey(KeyCode.A))
         {
-            position.x -= playerSpeed;
-            this.transform.position = position;
+            movementVector.x -= 1;
         }
-        else if (Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.D))
         {
-            position.x += playerSpeed;
-            this.transform.position = position;
+            movementVector.x += 1;
         }
-        else if (Input.GetKey(KeyCode.S))
+        if (Input.GetKey(KeyCode.S))
         {
-            position.y -= playerSpeed;
-            this.transform.position = position;
+            movementVector.y -= 1;
         }
-        else if (Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.W))
         {
-            position.y += playerSpeed;
-            this.transform.position = position;
+            movementVector.y += 1;
         }
+        movementVector = movementVector.normalized * playerSpeed;
+        newPosition += movementVector;
+        Collider2D[] collisions = Physics2D.OverlapCircleAll(newPosition, 0.5f);
+        foreach (Collider2D collider in collisions)
+        {
+            string tag = collider.gameObject.tag;
+            if (tag == "Wall")
+            {
+                return;
+            }
+        }
+        transform.position = newPosition;
     }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Room"))
@@ -101,13 +120,12 @@ public class PlayerManager : MonoBehaviour
         }
     }
     public void DecreaseHealth(int decreaseAmount) {
-        if (currentHealth - decreaseAmount < 0)
+
+        currentHealth -= decreaseAmount; 
+        Debug.Log("Taking damage, current health is now " + currentHealth);
+        if (currentHealth <= 0)
         {
-            //You ded.
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        }
-        else {
-            currentHealth -= decreaseAmount; 
         }
     }
     public int AddToBalance(int increaseAmount)
@@ -145,5 +163,10 @@ public class PlayerManager : MonoBehaviour
         }
         Debug.Log("ERROR: Item does not have any type assigned - cannot be picked up");
         return null;
+    }
+
+    public void SetSpeed(float newSpeed)
+    {
+        playerSpeed = newSpeed;
     }
 }
