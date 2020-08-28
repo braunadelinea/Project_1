@@ -141,7 +141,7 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    public void DropSelected() //Unfinished
+    public void DropSelected()
     {
         if (!backpackPanel.activeSelf)
         {

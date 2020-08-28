@@ -5,71 +5,82 @@ using UnityEngine.UI;
 //foreach (Slot slot in backpackPanel.GetComponentsInChildren<Slot>())
 public class CompletionLoader : MonoBehaviour
 {
-    bool[,] completion;
+    int completion;
     // Start is called before the first frame update
     void Start()
     {
-        print("Getting completion");
         completion = FindObjectOfType<GameManager>().GetCompletion();
-        for(int i = 0; i < 3; i++)
+        Image[] iconObjects = GameObject.Find("Completion Icons").GetComponentsInChildren<Image>();
+        foreach (Image icon in iconObjects)
         {
-            Image[] iconObjects = GameObject.Find("Timeline " + (i+1) + " Icons").GetComponentsInChildren<Image>();
-            foreach (Image icon in iconObjects)
+            switch (icon.name)
             {
-                switch (icon.name)
-                {
-                    case "Ice Icon":
-                        if (completion[i, 0])
-                        {
-                            icon.color = Color.black;
-                        }
-                        else
-                        {
-
-                        }        
-                        break;
-                    case "Fire Icon":
-                        if (completion[i, 1])
-                        {
-                            icon.color = Color.black;
-                        }
-                        else
-                        {
-
-                        }
-                        break;
-                    case "Earth Icon":
-                        if (completion[i, 2])
-                        {
-                            icon.color = Color.black;
-                        }
-                        else
-                        {
-
-                        }
-                        break;
-                    case "Wind Icon":
-                        if (completion[i, 3])
-                        {
-                            icon.color = Color.black;
-                        }
-                        else
-                        {
-
-                        }
-                        break;
-                    case "Time Icon":
-                        if (completion[i, 4])
-                        {
-                            icon.color = Color.black;
-                        }
-                        else
-                        {
-
-                        }
-                        break;
-                }
-
+                case "Ice Icon":
+                    if (completion > 0)
+                    {
+                        icon.sprite = Resources.Load<Sprite>("Completion Icons/Completion Ice Filled");
+                    }
+                    else
+                    {
+                        Debug.Log("Ice Icon Empty");
+                        icon.sprite = Resources.Load<Sprite>("Completion Icons/Completion Ice Empty");
+                    }
+                    break;
+                case "Fire Icon":
+                    if (completion > 1)
+                    {
+                        icon.sprite = Resources.Load<Sprite>("Completion Icons/Completion Fire Filled");
+                    }
+                    else
+                    {
+                        icon.sprite = Resources.Load<Sprite>("Completion Icons/Completion Fire Empty");
+                    }
+                    break;
+                case "Earth Icon":
+                    Debug.Log("Earth Icon Empty");
+                    if (completion > 2)
+                    {
+                        icon.sprite = Resources.Load<Sprite>("Completion Icons/Completion Earth Filled");
+                    }
+                    else
+                    {
+                        Debug.Log("Fire Icon Empty");
+                        icon.sprite = Resources.Load<Sprite>("Completion Icons/Completion Earth Empty");
+                    }
+                    break;
+                case "Wind Icon":
+                    if (completion > 3)
+                    {
+                        icon.sprite = Resources.Load<Sprite>("Completion Icons/Completion Wind Filled");
+                    }
+                    else
+                    {
+                        Debug.Log("Wind Icon Empty");
+                        icon.sprite = Resources.Load<Sprite>("Completion Icons/Completion Wind Empty");
+                    }
+                    break;
+                case "Time Icon":
+                    if (completion > 4)
+                    {
+                        icon.sprite = Resources.Load<Sprite>("Completion Icons/Completion Time Filled");
+                    }
+                    else
+                    {
+                        Debug.Log("Time Icon Empty");
+                        icon.sprite = Resources.Load<Sprite>("Completion Icons/Completion Time Empty");
+                    }
+                    break;
+                case "Devil Icon":
+                    if (completion > 5)
+                    {
+                        icon.sprite = Resources.Load<Sprite>("Completion Icons/Completion Devil Filled");
+                    }
+                    else
+                    {
+                        Debug.Log("Devil Icon Empty");
+                        icon.sprite = Resources.Load<Sprite>("Completion Icons/Completion Devil Empty");
+                    }
+                    break;
             }
         }
     }

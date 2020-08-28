@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerManager : MonoBehaviour
 {
@@ -17,18 +18,25 @@ public class PlayerManager : MonoBehaviour
     private Weapon equipedWeapon;
 
     private float playerSpeed;
+    private bool movingRight;
+    private bool moving;
     private GameObject currentItemCollision;
+
+    private Animator animator;
 
     //---- METHODS ----//
 
     void Start()
     {
+        animator = gameObject.GetComponent<Animator>();
         currentHealth = 5;
         maxHealth = 5;
         balance = 10;
         inventory = gameObject.GetComponent<Inventory>();
         equipedWeapon = Weapon.Sword;
         playerSpeed = 0.1f;
+        movingRight = true;
+        moving = false;
     }
 
     void Update()
@@ -56,22 +64,38 @@ public class PlayerManager : MonoBehaviour
     {
         Vector3 newPosition = this.transform.position;
         Vector3 movementVector = Vector3.zero;
+        bool newMoving = false;
         if (Input.GetKey(KeyCode.A))
         {
+            movingRight = false;
             movementVector.x -= 1;
+            newMoving = true;
         }
         if (Input.GetKey(KeyCode.D))
         {
+            movingRight = true;
             movementVector.x += 1;
+            newMoving = true;
         }
         if (Input.GetKey(KeyCode.S))
         {
             movementVector.y -= 1;
+            newMoving = true;
         }
         if (Input.GetKey(KeyCode.W))
         {
             movementVector.y += 1;
+            newMoving = true;
         }
+        if (moving == false && newMoving == true)
+        {
+            animator.SetTrigger("Start Walk");
+        }
+        else if (moving == true && newMoving == false)
+        {
+            animator.SetTrigger("Start Idle");
+        }
+        moving = newMoving;
         movementVector = movementVector.normalized * playerSpeed;
         newPosition += movementVector;
         Collider2D[] collisions = Physics2D.OverlapCircleAll(newPosition, 0.5f);
@@ -84,6 +108,23 @@ public class PlayerManager : MonoBehaviour
             }
         }
         transform.position = newPosition;
+        UpdateAnimationDirection();
+    }
+
+    void UpdateAnimationDirection()
+    {
+        if (movingRight)
+        {
+            Vector3 temp = transform.localScale;
+            temp.x = 1;
+            gameObject.transform.localScale = temp;
+        }
+        else if (!movingRight)
+        {
+            Vector3 temp = transform.localScale;
+            temp.x = -1;
+            gameObject.transform.localScale = temp;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -118,6 +159,7 @@ public class PlayerManager : MonoBehaviour
         {
             currentHealth += increaseAmount;
         }
+        RenderHearts();
     }
     public void DecreaseHealth(int decreaseAmount) {
 
@@ -127,7 +169,9 @@ public class PlayerManager : MonoBehaviour
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
+        RenderHearts();
     }
+
     public int AddToBalance(int increaseAmount)
     {
         balance += increaseAmount;
@@ -168,5 +212,23 @@ public class PlayerManager : MonoBehaviour
     public void SetSpeed(float newSpeed)
     {
         playerSpeed = newSpeed;
+    }
+
+    //---- PRIVATE METHODS ----//
+
+    private void RenderHearts()
+    {
+        Image[] icons = GameObject.Find("Hearts").GetComponentsInChildren<Image>();
+        for (int i = 1; i <= icons.Length; i++)
+        {
+            if (i <= currentHealth)
+            {
+                icons[i - 1].enabled = true;
+            }
+            else
+            {
+                icons[i - 1].enabled = false;
+            }
+        }
     }
 }

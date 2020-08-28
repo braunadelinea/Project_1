@@ -9,12 +9,14 @@ public class Slot : MonoBehaviour
 
     private Item item;
     private GameObject slot;
+    private Sprite sprite;
 
     //---- METHODS ----//
 
     void Start()
     {
         slot = gameObject;
+        sprite = gameObject.GetComponent<Image>().sprite;
     }
 
     public bool isEmpty()
@@ -38,15 +40,16 @@ public class Slot : MonoBehaviour
     {
         Item temp = item;
         item = newItem;
-        if(item == null)
+        if (newItem == null)
         {
-            slot.gameObject.GetComponent<Image>().sprite = null;
+            gameObject.transform.GetChild(0).gameObject.GetComponent<Image>().sprite = null;
+            gameObject.transform.GetChild(0).gameObject.GetComponent<Image>().enabled = false;
             return null;
         }
         item.transform.SetParent(slot.gameObject.transform);
         item.transform.localPosition = new Vector3(0,0);
-        item.gameObject.SetActive(false);
-        slot.gameObject.GetComponent<Image>().sprite = item.GetSprite();
+        gameObject.transform.GetChild(0).gameObject.GetComponent<Image>().sprite = item.GetSprite();
+        gameObject.transform.GetChild(0).gameObject.GetComponent<Image>().enabled = true;
         return temp;
     }
 

@@ -6,11 +6,9 @@ public class GameManager : MonoBehaviour
 {
     public enum Element { Ice, Fire, Earth, Wind, Time, Devil}
     private Element currentDungeonElement; //Which elemental dungeon the player is in, used to load correct sprites into the game
-    private int currentTimeline; //Which timeline the player is in, used to load correct sprites and correct player stats (Each timeline gives the player a different disadvantage)
-    private bool[,] completion; //tracks which gods have been defeated in which timelines to save to file, used to render completion visuals and which boss is to be fought next
-    private bool devilComplete = false;
-    public float number = -34;
-    public int type; 
+    private int completion; //tracks which gods have been defeated
+    private bool gameComplete = false;
+    public int type;
 
     public void Update() {
         if (Input.GetKeyDown(KeyCode.Escape)) {
@@ -44,11 +42,7 @@ public class GameManager : MonoBehaviour
     }
     void Awake()
     {
-        
-        completion = new bool[3,5]; //3 timelines, 5 gods to defeat in each timeline: order of gods -> Ice, Fire, Earth, Wind, Time
-        print("Setting test completion");
-        completion[0, 3] = true;
-        completion[1, 2] = true;
+        completion = 0; //6 bosses to defeat: order -> Ice, Fire, Earth, Wind, Time, Devil
     }
 
     public void Save()
@@ -61,8 +55,6 @@ public class GameManager : MonoBehaviour
         WorldData gameCompletion = SaveSystem.Load();
 
         completion = gameCompletion.gameCompletion;
-        number = gameCompletion.number; 
-        //more of these lines can be added for future variables to be saved and stored in WorldData
     }
 
     public void GoToNextDungeon()
@@ -101,14 +93,9 @@ public class GameManager : MonoBehaviour
 
     //**** GETTER METHODS ****//
 
-    public bool[,] GetCompletion()
+    public int GetCompletion()
     {
         return completion;
-    }
-
-    public int GetTimeline()
-    {
-        return currentTimeline;
     }
 
     public Element GetCurrentElement()
@@ -118,74 +105,27 @@ public class GameManager : MonoBehaviour
 
     public Element GetNextBossElement()
     {
-        for(int i = 0; i < 5; i++)
+        switch (completion)
         {
-            //if this god has not yet been defeated, return this as the next boss to defeat
-            if(!completion[currentTimeline-1, i])
-            {
-                switch (i)
-                {
-                    case 0:
-                        return Element.Ice;
+            case 0:
+                return Element.Ice;
 
-                    case 1:
-                        return Element.Fire;
+            case 1:
+                return Element.Fire;
 
-                    case 2:
-                        return Element.Earth;
+            case 2:
+                return Element.Earth;
 
-                    case 3:
-                        return Element.Wind;
+            case 3:
+                return Element.Wind;
 
-                    case 4:
-                        return Element.Time;
+            case 4:
+                return Element.Time;
+            case 5:
+                return Element.Devil;
 
-                }
-            }
         }
-        //should never get here, the timeline should not be able to be re-entered after it is complete
-        Debug.Log("ERROR: All gods have been defeated in this timeline");
-        return Element.Devil; //should not be devil, however must return something and cannot return null
-    }
-
-    //**** SETTER METHODS ****//
-
-    public void Complete(int timeline, Element god)
-    {
-        if(timeline < 1 || timeline > 3)
-        {
-            Debug.LogError("ERROR: Timeline # out of bounds");
-        }
-        switch (god)
-        {
-            case Element.Ice:
-                completion[timeline - 1, 0] = true;
-                break;
-            case Element.Fire:
-                completion[timeline - 1, 1] = true;
-                break;
-            case Element.Earth:
-                completion[timeline - 1, 2] = true;
-                break;
-            case Element.Wind:
-                completion[timeline - 1, 3] = true;
-                break;
-            case Element.Time:
-                completion[timeline - 1, 4] = true;
-                break;
-            case Element.Devil:
-                devilComplete = true;
-                break;
-        }
-    }
-
-    public void SetTimeline(int num)
-    {
-        if(num < 1 || num > 3)
-        {
-            Debug.Log("ERROR: Timeline inputted is out of bounds");
-            return;
-        }
-        currentTimeline = num;
+        Debug.Log("ERROR: Completion variable is out of bounds");
+        return Element.Devil; //should not be devil, however must return something, cannot return null
     }
 };
