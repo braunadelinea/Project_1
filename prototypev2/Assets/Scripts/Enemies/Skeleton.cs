@@ -60,33 +60,7 @@ public class Skeleton : MonoBehaviour
         {
             UpdatePhase();
             ApplyPhase();
-            if (movementDirection.x > 0)
-            {
-                Vector3 temp = transform.localScale;
-                temp.x = 1;
-                gameObject.transform.localScale = temp;
-            }
-            else if (movementDirection.x < 0)
-            {
-                Vector3 temp = transform.localScale;
-                temp.x = -1;
-                gameObject.transform.localScale = temp;
-            }
-            if (currentPhase == Phase.Attack)
-            {
-                if (gameObject.transform.position.x - player.transform.position.x > 0)
-                {
-                    Vector3 temp = transform.localScale;
-                    temp.x = -1;
-                    gameObject.transform.localScale = temp;
-                }
-                else
-                {
-                    Vector3 temp = transform.localScale;
-                    temp.x = 1;
-                    gameObject.transform.localScale = temp;
-                }
-            }
+            ChangeSpriteDirection();
         }
     }
 
@@ -219,6 +193,37 @@ public class Skeleton : MonoBehaviour
             }
         }
         transform.position += movementDirection * speed;
+    }
+
+    private void ChangeSpriteDirection()
+    {
+        if (movementDirection.x > 0)
+        {
+            Vector3 temp = transform.localScale;
+            temp.x = 1;
+            gameObject.transform.localScale = temp;
+        }
+        else if (movementDirection.x < 0)
+        {
+            Vector3 temp = transform.localScale;
+            temp.x = -1;
+            gameObject.transform.localScale = temp;
+        }
+        if (currentPhase == Phase.Attack)
+        {
+            if (gameObject.transform.position.x - player.transform.position.x > 0)
+            {
+                Vector3 temp = transform.localScale;
+                temp.x = -1;
+                gameObject.transform.localScale = temp;
+            }
+            else
+            {
+                Vector3 temp = transform.localScale;
+                temp.x = 1;
+                gameObject.transform.localScale = temp;
+            }
+        }
     }
 
     private void ChangeMoveDir(Vector2 newDirection)
