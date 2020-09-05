@@ -182,7 +182,7 @@ public class Skeleton : MonoBehaviour
                 {
                     player.GetComponent<PlayerManager>().DecreaseHealth(1);
                     lastAttackTime += attackInterval;
-                    Instantiate(arrow, transform.position, Quaternion.LookRotation(transform.position - player.transform.position));
+                    //Instantiate(arrow, transform.position);
                     if (doneShooting)
                     {
                         doneShooting = false;
