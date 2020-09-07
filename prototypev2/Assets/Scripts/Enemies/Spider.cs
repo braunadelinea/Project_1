@@ -89,7 +89,7 @@ public class Spider : MonoBehaviour
             case Phase.Wander:
                 if (distToPlayer < startLungeDistance)
                 {
-                    Debug.Log("Beginning Buildup"); 
+                    //Debug.Log("Beginning Buildup"); 
                     currentphase = Phase.Buildup;
                     buildupTimer = 0; 
                     animator.SetTrigger("Start Buildup");
@@ -101,7 +101,7 @@ public class Spider : MonoBehaviour
                 break;
             case Phase.Buildup:
                 if (buildupTimer > 2) {
-                    Debug.Log("Lunging"); 
+                    //Debug.Log("Lunging"); 
                     ChangeMoveDir((player.transform.position - this.transform.position).normalized);
                     currentphase = Phase.Running;
                     buildupTimer = 0;
@@ -110,26 +110,21 @@ public class Spider : MonoBehaviour
                 }
                 break;
             case Phase.Running:
-                if (distToPlayer < startAttackDistance)
-                {
-                    currentphase = Phase.Attacking;
-                    animator.SetTrigger("Start Attacking");
-                }
-                else if (runningTimer > 4) {
+                if (runningTimer > 4) {
                     currentphase = Phase.Wander;
                     runningTimer = 0; 
                 }
                 break;
             case Phase.Attacking:
                 if (distToPlayer > stopAttackDistance) {
-                    Debug.Log("Wandering"); 
+                    //Debug.Log("Wandering"); 
                     currentphase = Phase.Wander;
                     animator.SetTrigger("Start Wander"); 
                 }
                 break;
             case Phase.Stunned:
                 if (stunnedTimer > 2) {
-                    Debug.Log("Stunned, Wandering"); 
+                    //Debug.Log("Stunned, Wandering"); 
                     currentphase = Phase.Wander;
                     animator.SetTrigger("Start Wander"); 
                     stunnedTimer = 0; 
@@ -139,7 +134,15 @@ public class Spider : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        currentphase = Phase.Stunned;
+        if (collision.gameObject.tag == "Wall")
+        {
+            Debug.Log("Wall Collision Detected, Stunned");
+            currentphase = Phase.Stunned;
+        }
+        else if (collision.gameObject.tag == "player") {
+            Debug.Log("Player Collision Detected, attacking");
+            currentphase = Phase.Attacking; 
+        }
     }
     private void ApplyPhase() {
         switch (currentphase) {
@@ -147,7 +150,7 @@ public class Spider : MonoBehaviour
                 Debug.Log("Wandering"); 
                 if (movementdir == Vector3.zero)
                 {
-                    speed = 0.5f; 
+                    speed = 0.10f; 
                     System.Random rand = new System.Random();
                     ChangeMoveDir(new Vector3((float)rand.NextDouble() - 0.5f, (float)rand.NextDouble() - 0.5f).normalized);
                 }
@@ -173,20 +176,23 @@ public class Spider : MonoBehaviour
         {
             return;
         }
-        Collider2D[] collisions = Physics2D.OverlapCircleAll(transform.position + movementdir * speed, 0.5f);
-        foreach (Collider2D collider in collisions)
+        if (Phase.Running != currentphase) 
         {
-            string tag = collider.gameObject.tag;
-            //stop if the enemy is close to a wall
-            if (tag == "player" || tag == "Wall")
+            Collider2D[] collisions = Physics2D.OverlapCircleAll(transform.position + movementdir * speed, 0.5f);
+            foreach (Collider2D collider in collisions)
             {
-                ChangeMoveDir(Vector3.zero);
-                return;
-            }
-            else if (collider.gameObject != currentroom && tag == "Room")
-            {
-                ChangeMoveDir(Vector3.zero);
-                return;
+                string tag = collider.gameObject.tag;
+                //stop if the enemy is close to a wall
+                if (tag == "player" || tag == "Wall")
+                {
+                    ChangeMoveDir(Vector3.zero);
+                    return;
+                }
+                else if (collider.gameObject != currentroom && tag == "Room")
+                {
+                    ChangeMoveDir(Vector3.zero);
+                    return;
+                }
             }
         }
         transform.position += movementdir * speed;
