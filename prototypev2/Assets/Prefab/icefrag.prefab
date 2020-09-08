@@ -12,9 +12,8 @@ GameObject:
   - component: {fileID: 1700757060633225724}
   - component: {fileID: 1700757060633225727}
   - component: {fileID: 1700757060633225726}
-  - component: {fileID: 6826576727396859847}
   m_Layer: 0
-  m_Name: bullet
+  m_Name: icefrag
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75,7 +74,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: f661f9c7c2e06ba45a84f163e54c37b5, type: 3}
-  m_Color: {r: 0.018116832, g: 1, b: 0, a: 1}
+  m_Color: {r: 1, g: 0, b: 0.6291132, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -132,17 +131,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &6826576727396859847
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1700757060633225713}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 017b3097328aa2f46bad42c76ff336f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  iceFragment: {fileID: 1700757060633225713, guid: 3dc2ba0c180554847b1f52562bbe1d2d,
-    type: 3}
