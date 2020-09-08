@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1700757060633225724}
   - component: {fileID: 1700757060633225727}
   - component: {fileID: 1700757060633225726}
+  - component: {fileID: 2284770564342125292}
   m_Layer: 0
   m_Name: icefrag
   m_TagString: Enemy
@@ -131,3 +132,15 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &2284770564342125292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1700757060633225713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cc0eeabc8983f34e98ee03bea11e9f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

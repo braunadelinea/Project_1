@@ -16,5 +16,8 @@ public class icefragment : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+        if (collision.gameObject.CompareTag("Boss")) {
+            Destroy(this.gameObject); 
+        }
     }
 }

@@ -85,21 +85,24 @@ public class IceDino : MonoBehaviour
                 ChangeMoveDir(Vector3.zero);
                 return;
             case Phase.Attacking:
-                GameObject instanceShard = Instantiate(iceShard, this.transform.position, Quaternion.identity);
                 int shardDirection = UnityEngine.Random.Range(0, 3);
                 switch (shardDirection)
                 {
                     case 0:
+                        GameObject instanceShard = Instantiate(iceShard, new Vector3(this.transform.position.x - 1, this.transform.position.y, this.transform.position.z), Quaternion.identity);
                         instanceShard.GetComponent<Rigidbody2D>().velocity = Vector2.left;
                         break;
                     case 1:
-                        instanceShard.GetComponent<Rigidbody2D>().velocity = Vector2.right;
+                        GameObject instanceShardTwo = Instantiate(iceShard, new Vector3(this.transform.position.x + 1, this.transform.position.y, this.transform.position.z), Quaternion.identity);
+                        instanceShardTwo.GetComponent<Rigidbody2D>().velocity = Vector2.right;
                         break;
                     case 2:
-                        instanceShard.GetComponent<Rigidbody2D>().velocity = Vector2.up;
+                        GameObject instanceShardThree = Instantiate(iceShard, new Vector3(this.transform.position.x, this.transform.position.y + 1, this.transform.position.z), Quaternion.identity);
+                        instanceShardThree.GetComponent<Rigidbody2D>().velocity = Vector2.up;
                         break;
                     case 3:
-                        instanceShard.GetComponent<Rigidbody2D>().velocity = Vector2.down;
+                        GameObject instanceShardFour = Instantiate(iceShard, new Vector3(this.transform.position.x, this.transform.position.y - 1, this.transform.position.z), Quaternion.identity);
+                        instanceShardFour.GetComponent<Rigidbody2D>().velocity = Vector2.down;
                         break;
                     default:
                         Debug.Log("Error applying appropriate forces to ice shard.");
