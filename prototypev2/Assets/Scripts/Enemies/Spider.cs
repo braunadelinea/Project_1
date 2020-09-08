@@ -112,7 +112,8 @@ public class Spider : MonoBehaviour
             case Phase.Running:
                 if (runningTimer > 4) {
                     currentphase = Phase.Wander;
-                    runningTimer = 0; 
+                    runningTimer = 0;
+                    animator.SetTrigger("Start Wander");
                 }
                 break;
             case Phase.Attacking:
@@ -138,10 +139,12 @@ public class Spider : MonoBehaviour
         {
             Debug.Log("Wall Collision Detected, Stunned");
             currentphase = Phase.Stunned;
+            animator.SetTrigger("Start Stunned");
         }
         else if (collision.gameObject.tag == "player") {
             Debug.Log("Player Collision Detected, attacking");
-            currentphase = Phase.Attacking; 
+            currentphase = Phase.Attacking;
+            animator.SetTrigger("Start Attacking");
         }
     }
     private void ApplyPhase() {
