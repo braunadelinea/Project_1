@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7564669331915627701}
   - component: {fileID: 2226708431806200990}
   - component: {fileID: 6355332532659464195}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (35)
   m_TagString: Untagged
   m_Icon: {fileID: 7148428337604731935, guid: 0000000000000000d000000000000000, type: 0}
@@ -47,6 +47,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -213,7 +214,7 @@ GameObject:
   - component: {fileID: 1560715009448554439}
   - component: {fileID: 4793290586336138871}
   - component: {fileID: 8417470043691735945}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (6)
   m_TagString: Untagged
   m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
@@ -249,6 +250,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -415,7 +417,7 @@ GameObject:
   - component: {fileID: 6833447608487735541}
   - component: {fileID: 4257281152414008856}
   - component: {fileID: 1907465545401026220}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (59)
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -451,6 +453,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -617,7 +620,7 @@ GameObject:
   - component: {fileID: 4359339591579482758}
   - component: {fileID: 8445729370632774841}
   - component: {fileID: 4250432859974549497}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (96)
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -653,6 +656,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -819,7 +823,7 @@ GameObject:
   - component: {fileID: 4796718100054575537}
   - component: {fileID: 4433557887157449353}
   - component: {fileID: 4868974567269475920}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (39)
   m_TagString: Untagged
   m_Icon: {fileID: 7148428337604731935, guid: 0000000000000000d000000000000000, type: 0}
@@ -855,6 +859,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1194,7 +1199,7 @@ GameObject:
   - component: {fileID: 194854354448653599}
   - component: {fileID: 194854354448653569}
   - component: {fileID: 4961123828044708314}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
@@ -1230,6 +1235,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1396,7 +1402,7 @@ GameObject:
   - component: {fileID: 8726936985525317443}
   - component: {fileID: 9173556186568121210}
   - component: {fileID: 1768355755654646805}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (76)
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -1432,6 +1438,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1598,7 +1605,7 @@ GameObject:
   - component: {fileID: 6991148662916277943}
   - component: {fileID: 1719188148132255382}
   - component: {fileID: 6508158887797215781}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (103)
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -1634,6 +1641,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1800,7 +1808,7 @@ GameObject:
   - component: {fileID: 8768447627500650224}
   - component: {fileID: 6951270994966466070}
   - component: {fileID: 9159955748917149525}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (58)
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -1836,6 +1844,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2002,7 +2011,7 @@ GameObject:
   - component: {fileID: 6550016035669829211}
   - component: {fileID: 4288697756963713739}
   - component: {fileID: 6376861145177753734}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (47)
   m_TagString: Untagged
   m_Icon: {fileID: 7148428337604731935, guid: 0000000000000000d000000000000000, type: 0}
@@ -2038,6 +2047,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2204,7 +2214,7 @@ GameObject:
   - component: {fileID: 4053746152010639991}
   - component: {fileID: 3202355074500356612}
   - component: {fileID: 203133458197909042}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (89)
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -2240,6 +2250,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2406,7 +2417,7 @@ GameObject:
   - component: {fileID: 4824862466519302136}
   - component: {fileID: 4350006463985116360}
   - component: {fileID: 15701631187445709}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (77)
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -2442,6 +2453,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2608,7 +2620,7 @@ GameObject:
   - component: {fileID: 8957855679936105154}
   - component: {fileID: 2497791915648424118}
   - component: {fileID: 1633220730175970580}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (44)
   m_TagString: Untagged
   m_Icon: {fileID: 7422848464349959988, guid: 0000000000000000d000000000000000, type: 0}
@@ -2644,6 +2656,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2810,7 +2823,7 @@ GameObject:
   - component: {fileID: 7710754489534533206}
   - component: {fileID: 7221653199091825408}
   - component: {fileID: 7873826300588922445}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (83)
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -2846,6 +2859,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3012,7 +3026,7 @@ GameObject:
   - component: {fileID: 5181492703030060114}
   - component: {fileID: 2975861020887036434}
   - component: {fileID: 8064595030873758696}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (97)
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -3048,6 +3062,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3214,7 +3229,7 @@ GameObject:
   - component: {fileID: 24980962518608624}
   - component: {fileID: 244652468064732553}
   - component: {fileID: 4004417198546499946}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (7)
   m_TagString: Untagged
   m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
@@ -3250,6 +3265,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3416,7 +3432,7 @@ GameObject:
   - component: {fileID: 6922709054971635496}
   - component: {fileID: 4448035501655207181}
   - component: {fileID: 3144870404632657667}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (84)
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -3452,6 +3468,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3618,7 +3635,7 @@ GameObject:
   - component: {fileID: 2585602331828339026}
   - component: {fileID: 4745849086162708566}
   - component: {fileID: 5054982291242199131}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (57)
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -3654,6 +3671,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3820,7 +3838,7 @@ GameObject:
   - component: {fileID: 6686843579559404741}
   - component: {fileID: 628631826480847105}
   - component: {fileID: 8687455997952017320}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (93)
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -3856,6 +3874,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -4022,7 +4041,7 @@ GameObject:
   - component: {fileID: 7400714829785113684}
   - component: {fileID: 2424613605163203207}
   - component: {fileID: 1104866482054836108}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (90)
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -4058,6 +4077,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -4224,7 +4244,7 @@ GameObject:
   - component: {fileID: 8194544399496385240}
   - component: {fileID: 6664995743971584804}
   - component: {fileID: 3715619647067581465}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (79)
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -4260,6 +4280,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -4426,7 +4447,7 @@ GameObject:
   - component: {fileID: 499450814383931490}
   - component: {fileID: 6106667418123937195}
   - component: {fileID: 7105003120351112617}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (18)
   m_TagString: Untagged
   m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
@@ -4462,6 +4483,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -4628,7 +4650,7 @@ GameObject:
   - component: {fileID: 7202289010111825177}
   - component: {fileID: 1514330768011491007}
   - component: {fileID: 6223477203113448299}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (14)
   m_TagString: Untagged
   m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
@@ -4664,6 +4686,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -4830,7 +4853,7 @@ GameObject:
   - component: {fileID: 2772360151137594214}
   - component: {fileID: 2704834639271043750}
   - component: {fileID: 7264019033206535991}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (61)
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -4866,6 +4889,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -5032,7 +5056,7 @@ GameObject:
   - component: {fileID: 3471857995534659175}
   - component: {fileID: 319438580087222392}
   - component: {fileID: 8173584326657650111}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (94)
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -5068,6 +5092,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -5234,7 +5259,7 @@ GameObject:
   - component: {fileID: 2912459882551597892}
   - component: {fileID: 7856835539873493835}
   - component: {fileID: 7708585507503715912}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (17)
   m_TagString: Untagged
   m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
@@ -5270,6 +5295,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -5436,7 +5462,7 @@ GameObject:
   - component: {fileID: 2786204142909823154}
   - component: {fileID: 5536039019605668771}
   - component: {fileID: 5204926006929359901}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (74)
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -5472,6 +5498,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -5638,7 +5665,7 @@ GameObject:
   - component: {fileID: 7385595348739495816}
   - component: {fileID: 5187904490881325712}
   - component: {fileID: 4788337291998401012}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (36)
   m_TagString: Untagged
   m_Icon: {fileID: 7148428337604731935, guid: 0000000000000000d000000000000000, type: 0}
@@ -5674,6 +5701,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -5840,7 +5868,7 @@ GameObject:
   - component: {fileID: 800022579176482811}
   - component: {fileID: 6778439643129664675}
   - component: {fileID: 3331151601576599322}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (26)
   m_TagString: Untagged
   m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
@@ -5876,6 +5904,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -6042,7 +6071,7 @@ GameObject:
   - component: {fileID: 7661117790563455198}
   - component: {fileID: 1284682478094050260}
   - component: {fileID: 2869699178207276854}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (63)
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -6078,6 +6107,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -6244,7 +6274,7 @@ GameObject:
   - component: {fileID: 4306083339976658136}
   - component: {fileID: 5792088911843253783}
   - component: {fileID: 5762899031023528464}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (1)
   m_TagString: Untagged
   m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
@@ -6280,6 +6310,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -6446,7 +6477,7 @@ GameObject:
   - component: {fileID: 5419968385983162993}
   - component: {fileID: 6378915611126047595}
   - component: {fileID: 8816044654497480959}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (70)
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -6482,6 +6513,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -6648,7 +6680,7 @@ GameObject:
   - component: {fileID: 7277540042690585809}
   - component: {fileID: 7855892220902097884}
   - component: {fileID: 6403257441213407505}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (56)
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -6684,6 +6716,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -6850,7 +6883,7 @@ GameObject:
   - component: {fileID: 1260730508211471097}
   - component: {fileID: 4953249030577509195}
   - component: {fileID: 2167661559634656005}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (105)
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -6886,6 +6919,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -7052,7 +7086,7 @@ GameObject:
   - component: {fileID: 4146047228607332006}
   - component: {fileID: 1216296104741713616}
   - component: {fileID: 292814660230468491}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (82)
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -7088,6 +7122,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -7254,7 +7289,7 @@ GameObject:
   - component: {fileID: 4800679586963085755}
   - component: {fileID: 7393554856842654109}
   - component: {fileID: 890355739959101285}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (69)
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -7290,6 +7325,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -7456,7 +7492,7 @@ GameObject:
   - component: {fileID: 5748965288661642822}
   - component: {fileID: 6019824893667160215}
   - component: {fileID: 2394415132385032671}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (55)
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -7492,6 +7528,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -7658,7 +7695,7 @@ GameObject:
   - component: {fileID: 7663214267704260990}
   - component: {fileID: 6452413852323022414}
   - component: {fileID: 8672515597557517504}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (88)
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -7694,6 +7731,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -7860,7 +7898,7 @@ GameObject:
   - component: {fileID: 3940353506608857428}
   - component: {fileID: 8348222599752945767}
   - component: {fileID: 7102435441242130829}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (25)
   m_TagString: Untagged
   m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
@@ -7896,6 +7934,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -8062,7 +8101,7 @@ GameObject:
   - component: {fileID: 5110951429818961180}
   - component: {fileID: 3823010150216984850}
   - component: {fileID: 6042182971548780716}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (46)
   m_TagString: Untagged
   m_Icon: {fileID: 7148428337604731935, guid: 0000000000000000d000000000000000, type: 0}
@@ -8098,6 +8137,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -8264,7 +8304,7 @@ GameObject:
   - component: {fileID: 428138701070668745}
   - component: {fileID: 7900376540464092471}
   - component: {fileID: 4062615617990089895}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (32)
   m_TagString: Untagged
   m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
@@ -8300,6 +8340,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -8466,7 +8507,7 @@ GameObject:
   - component: {fileID: 7739114429302622662}
   - component: {fileID: 3104564320095051898}
   - component: {fileID: 3781287056157563707}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (51)
   m_TagString: Untagged
   m_Icon: {fileID: 7148428337604731935, guid: 0000000000000000d000000000000000, type: 0}
@@ -8502,6 +8543,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -8668,7 +8710,7 @@ GameObject:
   - component: {fileID: 5882332352619065685}
   - component: {fileID: 3918998919319108732}
   - component: {fileID: 2140638251418855135}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (43)
   m_TagString: Untagged
   m_Icon: {fileID: 7422848464349959988, guid: 0000000000000000d000000000000000, type: 0}
@@ -8704,6 +8746,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -8870,7 +8913,7 @@ GameObject:
   - component: {fileID: 3266924023818428601}
   - component: {fileID: 233942979677642894}
   - component: {fileID: 1673647459353358793}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (38)
   m_TagString: Untagged
   m_Icon: {fileID: 7148428337604731935, guid: 0000000000000000d000000000000000, type: 0}
@@ -8906,6 +8949,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -9072,7 +9116,7 @@ GameObject:
   - component: {fileID: 6147374476702519336}
   - component: {fileID: 73553404619456745}
   - component: {fileID: 2404155679553469321}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (40)
   m_TagString: Untagged
   m_Icon: {fileID: 7148428337604731935, guid: 0000000000000000d000000000000000, type: 0}
@@ -9108,6 +9152,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -9274,7 +9319,7 @@ GameObject:
   - component: {fileID: 2326971856093246920}
   - component: {fileID: 7433271212004900055}
   - component: {fileID: 8918956812905688246}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (12)
   m_TagString: Untagged
   m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
@@ -9310,6 +9355,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -9476,7 +9522,7 @@ GameObject:
   - component: {fileID: 4270055421284001239}
   - component: {fileID: 5876049494097852501}
   - component: {fileID: 8358100227593048042}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (80)
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -9512,6 +9558,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -9678,7 +9725,7 @@ GameObject:
   - component: {fileID: 1793484101666234219}
   - component: {fileID: 6017817395822618272}
   - component: {fileID: 2425036938453323599}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (31)
   m_TagString: Untagged
   m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
@@ -9714,6 +9761,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -9880,7 +9928,7 @@ GameObject:
   - component: {fileID: 1700956370096142464}
   - component: {fileID: 7943175368160562647}
   - component: {fileID: 5806584201470432187}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (34)
   m_TagString: Untagged
   m_Icon: {fileID: 7148428337604731935, guid: 0000000000000000d000000000000000, type: 0}
@@ -9916,6 +9964,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -10082,7 +10131,7 @@ GameObject:
   - component: {fileID: 9010631055325853854}
   - component: {fileID: 2789448228801970814}
   - component: {fileID: 1228505752666473934}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (50)
   m_TagString: Untagged
   m_Icon: {fileID: 7148428337604731935, guid: 0000000000000000d000000000000000, type: 0}
@@ -10118,6 +10167,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -10284,7 +10334,7 @@ GameObject:
   - component: {fileID: 2004077003236273296}
   - component: {fileID: 374230006541609008}
   - component: {fileID: 2906049249960438803}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (37)
   m_TagString: Untagged
   m_Icon: {fileID: 7148428337604731935, guid: 0000000000000000d000000000000000, type: 0}
@@ -10320,6 +10370,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -10486,7 +10537,7 @@ GameObject:
   - component: {fileID: 2488238262253271931}
   - component: {fileID: 2378569242405375112}
   - component: {fileID: 3663886328861075447}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (67)
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -10522,6 +10573,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -10688,7 +10740,7 @@ GameObject:
   - component: {fileID: 5796576302277625829}
   - component: {fileID: 1787138574999198242}
   - component: {fileID: 2722778226590359018}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (20)
   m_TagString: Untagged
   m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
@@ -10724,6 +10776,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -10890,7 +10943,7 @@ GameObject:
   - component: {fileID: 1435661410333806711}
   - component: {fileID: 7865399591178975479}
   - component: {fileID: 1789693202680316537}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (86)
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -10926,6 +10979,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -11092,7 +11146,7 @@ GameObject:
   - component: {fileID: 6129849925226867593}
   - component: {fileID: 1770498421921561808}
   - component: {fileID: 7643044291508344542}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (23)
   m_TagString: Untagged
   m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
@@ -11128,6 +11182,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -11294,7 +11349,7 @@ GameObject:
   - component: {fileID: 2857105561616874647}
   - component: {fileID: 4936507502214997724}
   - component: {fileID: 3623988693129583722}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (24)
   m_TagString: Untagged
   m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
@@ -11330,6 +11385,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -11496,7 +11552,7 @@ GameObject:
   - component: {fileID: 6496349906538496252}
   - component: {fileID: 5057160736640572156}
   - component: {fileID: 4043621022813093242}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (101)
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -11532,6 +11588,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -11698,7 +11755,7 @@ GameObject:
   - component: {fileID: 177363964709523244}
   - component: {fileID: 8939828936514042657}
   - component: {fileID: 3811231950374422127}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (13)
   m_TagString: Untagged
   m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
@@ -11734,6 +11791,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -11900,7 +11958,7 @@ GameObject:
   - component: {fileID: 7292417497408119343}
   - component: {fileID: 4456307222783368393}
   - component: {fileID: 8913204879419903518}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (54)
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -11936,6 +11994,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -12102,7 +12161,7 @@ GameObject:
   - component: {fileID: 4078387242955062426}
   - component: {fileID: 3951467048463715040}
   - component: {fileID: 3963308665099738285}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (85)
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -12138,6 +12197,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -12304,7 +12364,7 @@ GameObject:
   - component: {fileID: 7245191698035852323}
   - component: {fileID: 786393276088751935}
   - component: {fileID: 5329678059832585928}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (9)
   m_TagString: Untagged
   m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
@@ -12340,6 +12400,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -12506,7 +12567,7 @@ GameObject:
   - component: {fileID: 5867726469418022771}
   - component: {fileID: 1741530118505155542}
   - component: {fileID: 5528225006115471185}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (99)
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -12542,6 +12603,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -12708,7 +12770,7 @@ GameObject:
   - component: {fileID: 6032133786211929495}
   - component: {fileID: 5049266955131893258}
   - component: {fileID: 4943466517161042538}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (73)
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -12744,6 +12806,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -12910,7 +12973,7 @@ GameObject:
   - component: {fileID: 7956561466951932896}
   - component: {fileID: 5633219539100306567}
   - component: {fileID: 6588930025325070857}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (28)
   m_TagString: Untagged
   m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
@@ -12946,6 +13009,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -13112,7 +13176,7 @@ GameObject:
   - component: {fileID: 2284493711500239765}
   - component: {fileID: 6364136157304712829}
   - component: {fileID: 8097535994464827079}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (64)
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -13148,6 +13212,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -13314,7 +13379,7 @@ GameObject:
   - component: {fileID: 1750728245939146078}
   - component: {fileID: 8936533642787007925}
   - component: {fileID: 7303809111801775927}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (27)
   m_TagString: Untagged
   m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
@@ -13350,6 +13415,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -13516,7 +13582,7 @@ GameObject:
   - component: {fileID: 7641104711541044729}
   - component: {fileID: 1031620736130393158}
   - component: {fileID: 4615445599995459284}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (62)
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -13552,6 +13618,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -13718,7 +13785,7 @@ GameObject:
   - component: {fileID: 3945148404657193054}
   - component: {fileID: 462783649467677103}
   - component: {fileID: 7069178973529766464}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (15)
   m_TagString: Untagged
   m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
@@ -13754,6 +13821,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -13920,7 +13988,7 @@ GameObject:
   - component: {fileID: 4131725399090251196}
   - component: {fileID: 2703178629341058767}
   - component: {fileID: 2424838122970609345}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (104)
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -13956,6 +14024,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -14122,7 +14191,7 @@ GameObject:
   - component: {fileID: 2446753175749262630}
   - component: {fileID: 8521408703617848521}
   - component: {fileID: 5226916215146747488}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (91)
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -14158,6 +14227,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -14324,7 +14394,7 @@ GameObject:
   - component: {fileID: 6306678210546843359}
   - component: {fileID: 826052734687725934}
   - component: {fileID: 1234769797580762539}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (71)
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -14360,6 +14430,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -14526,7 +14597,7 @@ GameObject:
   - component: {fileID: 268054850203288970}
   - component: {fileID: 6865921504676659623}
   - component: {fileID: 4559803888424143272}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (3)
   m_TagString: Untagged
   m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
@@ -14562,6 +14633,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -14728,7 +14800,7 @@ GameObject:
   - component: {fileID: 7678294832053929519}
   - component: {fileID: 3721921511040833882}
   - component: {fileID: 1704864464696517206}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (52)
   m_TagString: Untagged
   m_Icon: {fileID: 7148428337604731935, guid: 0000000000000000d000000000000000, type: 0}
@@ -14764,6 +14836,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -14930,7 +15003,7 @@ GameObject:
   - component: {fileID: 2512991501104629482}
   - component: {fileID: 1280301615406046854}
   - component: {fileID: 8260682908421493374}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (49)
   m_TagString: Untagged
   m_Icon: {fileID: 7148428337604731935, guid: 0000000000000000d000000000000000, type: 0}
@@ -14966,6 +15039,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -15132,7 +15206,7 @@ GameObject:
   - component: {fileID: 688784174339973222}
   - component: {fileID: 6728750211497276314}
   - component: {fileID: 1548994846343303050}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (19)
   m_TagString: Untagged
   m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
@@ -15168,6 +15242,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -15334,7 +15409,7 @@ GameObject:
   - component: {fileID: 5480260264746944410}
   - component: {fileID: 4941681659097454412}
   - component: {fileID: 5288318024222637400}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (66)
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -15370,6 +15445,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -15536,7 +15612,7 @@ GameObject:
   - component: {fileID: 329945490385371855}
   - component: {fileID: 8540074789669403818}
   - component: {fileID: 337526317177726917}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (65)
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -15572,6 +15648,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -15738,7 +15815,7 @@ GameObject:
   - component: {fileID: 4765742971308130019}
   - component: {fileID: 5473580494740503455}
   - component: {fileID: 3926136066504759931}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (10)
   m_TagString: Untagged
   m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
@@ -15774,6 +15851,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -15940,7 +16018,7 @@ GameObject:
   - component: {fileID: 3931946772469704116}
   - component: {fileID: 5456111396166229134}
   - component: {fileID: 683405565583774819}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (102)
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -15976,6 +16054,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -16142,7 +16221,7 @@ GameObject:
   - component: {fileID: 4941931176277519391}
   - component: {fileID: 2916232708861648797}
   - component: {fileID: 2684994191744964341}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (16)
   m_TagString: Untagged
   m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
@@ -16178,6 +16257,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -16344,7 +16424,7 @@ GameObject:
   - component: {fileID: 3995470225765299544}
   - component: {fileID: 6322450478783825343}
   - component: {fileID: 5810525607110956088}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (45)
   m_TagString: Untagged
   m_Icon: {fileID: 7422848464349959988, guid: 0000000000000000d000000000000000, type: 0}
@@ -16380,6 +16460,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -16546,7 +16627,7 @@ GameObject:
   - component: {fileID: 8931309196366548200}
   - component: {fileID: 484996959645413970}
   - component: {fileID: 2361742651209464913}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (95)
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -16582,6 +16663,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -16748,7 +16830,7 @@ GameObject:
   - component: {fileID: 7577700685764735402}
   - component: {fileID: 6475332042050764242}
   - component: {fileID: 4310288536337112159}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (2)
   m_TagString: Untagged
   m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
@@ -16784,6 +16866,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -16950,7 +17033,7 @@ GameObject:
   - component: {fileID: 2962241056643662357}
   - component: {fileID: 4979838579982941844}
   - component: {fileID: 2896496725189873941}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (60)
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -16986,6 +17069,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -17152,7 +17236,7 @@ GameObject:
   - component: {fileID: 5477045313706980813}
   - component: {fileID: 1904714324017446482}
   - component: {fileID: 6307668417707919008}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (68)
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -17188,6 +17272,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -17354,7 +17439,7 @@ GameObject:
   - component: {fileID: 7406029656794371976}
   - component: {fileID: 1683982764259590292}
   - component: {fileID: 4398405526086944379}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (87)
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -17390,6 +17475,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -17556,7 +17642,7 @@ GameObject:
   - component: {fileID: 4325627684720098877}
   - component: {fileID: 9219502022650761785}
   - component: {fileID: 1992185377099208852}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (98)
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -17592,6 +17678,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -17758,7 +17845,7 @@ GameObject:
   - component: {fileID: 8913683527987434250}
   - component: {fileID: 475900907733263369}
   - component: {fileID: 1661129231318183062}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (30)
   m_TagString: Untagged
   m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
@@ -17794,6 +17881,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -17960,7 +18048,7 @@ GameObject:
   - component: {fileID: 2183963301726930852}
   - component: {fileID: 1422968447676059898}
   - component: {fileID: 1178701808211631649}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (11)
   m_TagString: Untagged
   m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
@@ -17996,6 +18084,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -18162,7 +18251,7 @@ GameObject:
   - component: {fileID: 6422896551707309578}
   - component: {fileID: 978967506604107242}
   - component: {fileID: 4113352048024910812}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (8)
   m_TagString: Untagged
   m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
@@ -18198,6 +18287,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -18364,7 +18454,7 @@ GameObject:
   - component: {fileID: 3443934797283997126}
   - component: {fileID: 2459164025785136960}
   - component: {fileID: 894572357324122783}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (92)
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -18400,6 +18490,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -18566,7 +18657,7 @@ GameObject:
   - component: {fileID: 8538598328279665700}
   - component: {fileID: 4898755716018907656}
   - component: {fileID: 8739206068728823102}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (72)
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -18602,6 +18693,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -18768,7 +18860,7 @@ GameObject:
   - component: {fileID: 8882326022528307603}
   - component: {fileID: 864254029089792902}
   - component: {fileID: 461236320719647787}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (48)
   m_TagString: Untagged
   m_Icon: {fileID: 7148428337604731935, guid: 0000000000000000d000000000000000, type: 0}
@@ -18804,6 +18896,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -18970,7 +19063,7 @@ GameObject:
   - component: {fileID: 3916601716630167976}
   - component: {fileID: 7995865227165223098}
   - component: {fileID: 840092420463893286}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (75)
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -19006,6 +19099,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -19172,7 +19266,7 @@ GameObject:
   - component: {fileID: 8052312962349689177}
   - component: {fileID: 2657907545777214315}
   - component: {fileID: 3797097615581433159}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (42)
   m_TagString: Untagged
   m_Icon: {fileID: 7422848464349959988, guid: 0000000000000000d000000000000000, type: 0}
@@ -19208,6 +19302,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -19374,7 +19469,7 @@ GameObject:
   - component: {fileID: 3360337662688053567}
   - component: {fileID: 585624480177960511}
   - component: {fileID: 5660502754708508378}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (29)
   m_TagString: Untagged
   m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
@@ -19410,6 +19505,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -19576,7 +19672,7 @@ GameObject:
   - component: {fileID: 3383216967608439661}
   - component: {fileID: 5734282425922249658}
   - component: {fileID: 3229790461893345500}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (41)
   m_TagString: Untagged
   m_Icon: {fileID: 7148428337604731935, guid: 0000000000000000d000000000000000, type: 0}
@@ -19612,6 +19708,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -19778,7 +19875,7 @@ GameObject:
   - component: {fileID: 8312470073997679019}
   - component: {fileID: 2668868714537989166}
   - component: {fileID: 1107141337387246703}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (81)
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -19814,6 +19911,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -19980,7 +20078,7 @@ GameObject:
   - component: {fileID: 2734544963430924819}
   - component: {fileID: 8994124834790797101}
   - component: {fileID: 6811368275034354754}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (100)
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -20016,6 +20114,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -20182,7 +20281,7 @@ GameObject:
   - component: {fileID: 6793492102432566773}
   - component: {fileID: 2148317496010944585}
   - component: {fileID: 4212573541955995247}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (78)
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -20218,6 +20317,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -20384,7 +20484,7 @@ GameObject:
   - component: {fileID: 9183947183943122161}
   - component: {fileID: 3716221887282298642}
   - component: {fileID: 1844143768036038219}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (53)
   m_TagString: Untagged
   m_Icon: {fileID: 7148428337604731935, guid: 0000000000000000d000000000000000, type: 0}
@@ -20420,6 +20520,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -20586,7 +20687,7 @@ GameObject:
   - component: {fileID: 7957430116848048897}
   - component: {fileID: 4115652698362289907}
   - component: {fileID: 6614745782559173759}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint (33)
   m_TagString: Untagged
   m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
@@ -20622,6 +20723,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:

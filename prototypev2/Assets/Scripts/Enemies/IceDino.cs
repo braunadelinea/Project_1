@@ -11,16 +11,16 @@ public class IceDino : MonoBehaviour
 {
     private GameObject currentroom;
     private GameObject player;
-    public enum Phase {Idle, Attacking}
+    public enum Phase { Idle, Attacking }
     private Phase currentPhase = Phase.Idle;
     private float phaseStartTime;
 
     private float idleLength = 2f;
 
-    private float idleTimer = 0; 
+    private float idleTimer = 0;
     private Animator animator;
     public GameObject iceShard;
-    private Vector3 movementDirection; 
+    private Vector3 movementDirection;
 
     private void Start()
     {
@@ -30,6 +30,7 @@ public class IceDino : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log("Detected Trigger Collision " + collision.gameObject.name);
         if (currentroom != null)
         {
             return;
@@ -42,8 +43,8 @@ public class IceDino : MonoBehaviour
     }
     private void Update()
     {
-        Debug.Log(currentPhase); 
-        if (currentPhase == Phase.Idle) {
+        if (currentPhase == Phase.Idle)
+        {
             idleTimer += Time.deltaTime;
         }
     }
@@ -56,21 +57,23 @@ public class IceDino : MonoBehaviour
             ChangeSpriteDirection();
         }
     }
-    private void UpdatePhase() {
+    private void UpdatePhase()
+    {
         Phase previousphase = currentPhase;
-        switch (currentPhase) {
+        switch (currentPhase)
+        {
             case Phase.Idle:
                 if (idleTimer > idleLength)
                 {
                     currentPhase = Phase.Attacking;
-                    idleTimer = 0; 
+                    idleTimer = 0;
                     animator.SetTrigger("Start Attack");
                 }
                 break;
             case Phase.Attacking:
-               currentPhase = Phase.Idle;
-               animator.SetTrigger("Start Idle"); 
-               break; 
+                currentPhase = Phase.Idle;
+                animator.SetTrigger("Start Idle");
+                break;
         }
         if (previousphase != currentPhase)
         {
@@ -78,7 +81,8 @@ public class IceDino : MonoBehaviour
             Debug.Log("Phase changed from " + previousphase + " to " + currentPhase);
         }
     }
-    private void ApplyPhase() {
+    private void ApplyPhase()
+    {
         switch (currentPhase)
         {
             case Phase.Idle:
@@ -113,34 +117,35 @@ public class IceDino : MonoBehaviour
                 break;
         }
     }
-    private void ChangeSpriteDirection() {
-            if (movementDirection.x > 0)
-            {
-                Vector3 temp = transform.localScale;
-                temp.x = 1;
-                gameObject.transform.localScale = temp;
-            }
-            else if (movementDirection.x < 0)
+    private void ChangeSpriteDirection()
+    {
+        if (movementDirection.x > 0)
+        {
+            Vector3 temp = transform.localScale;
+            temp.x = 1;
+            gameObject.transform.localScale = temp;
+        }
+        else if (movementDirection.x < 0)
+        {
+            Vector3 temp = transform.localScale;
+            temp.x = -1;
+            gameObject.transform.localScale = temp;
+        }
+        if (currentPhase == Phase.Attacking)
+        {
+            if (gameObject.transform.position.x - player.transform.position.x > 0)
             {
                 Vector3 temp = transform.localScale;
                 temp.x = -1;
                 gameObject.transform.localScale = temp;
             }
-            if (currentPhase == Phase.Attacking)
+            else
             {
-                if (gameObject.transform.position.x - player.transform.position.x > 0)
-                {
-                    Vector3 temp = transform.localScale;
-                    temp.x = -1;
-                    gameObject.transform.localScale = temp;
-                }
-                else
-                {
-                    Vector3 temp = transform.localScale;
-                    temp.x = 1;
-                    gameObject.transform.localScale = temp;
-                }
+                Vector3 temp = transform.localScale;
+                temp.x = 1;
+                gameObject.transform.localScale = temp;
             }
+        }
     }
     private void ChangeMoveDir(Vector2 newDirection)
     {

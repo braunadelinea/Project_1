@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 1700757060633225724}
   - component: {fileID: 1700757060633225727}
   - component: {fileID: 8218940405527245267}
-  - component: {fileID: -1051842052546277061}
-  - component: {fileID: 7558409757448737685}
+  - component: {fileID: -3779136326017613661}
+  - component: {fileID: 3700926783247834059}
   m_Layer: 0
   m_Name: IceDino(wip)
   m_TagString: boss
@@ -124,9 +124,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27e7a3a50d7b88447a211fdc85471dfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentroom: {fileID: 0}
   iceShard: {fileID: 1700757060633225713, guid: 7e58786f34fcf5e4d8b28f05dd51cb6f,
     type: 3}
---- !u!95 &-1051842052546277061
+--- !u!95 &-3779136326017613661
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
@@ -134,7 +135,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1700757060633225713}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 324b1c147f0833e49912ae85af29a5b2, type: 2}
   m_CullingMode: 0
@@ -145,7 +146,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!50 &7558409757448737685
+--- !u!50 &3700926783247834059
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0

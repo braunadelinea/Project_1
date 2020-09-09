@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class bullet : MonoBehaviour
 {
-    private float speed = 2; 
+    private float speed = 3f; 
     private float splitTimer; 
     private float pWs = 1f; 
     private bool patternSplit = false;
@@ -70,96 +70,45 @@ public class bullet : MonoBehaviour
                     }
                     Destroy(this.gameObject);
                     break;
-                case 1: //diamond
-                    if (this.GetComponent<Rigidbody2D>().velocity == Vector2.left)
-                    {
-                        GameObject fragone = Instantiate(iceFragment, new Vector3(this.transform.position.x - 1, this.transform.position.y, this.transform.position.z), Quaternion.identity);
-                        fragone.GetComponent<Rigidbody2D>().velocity = Vector2.left;
-                        GameObject fragtwo = Instantiate(iceFragment, new Vector3(this.transform.position.x - 2, this.transform.position.y + 2, this.transform.position.z), Quaternion.identity);
-                        fragtwo.GetComponent<Rigidbody2D>().velocity = Vector2.left;
-                        GameObject fragthree = Instantiate(iceFragment, new Vector3(this.transform.position.x - 3, this.transform.position.y, this.transform.position.z), Quaternion.identity);
-                        fragthree.GetComponent<Rigidbody2D>().velocity = Vector2.left;
-                        GameObject fragfour = Instantiate(iceFragment, new Vector3(this.transform.position.x - 2, this.transform.position.y - 2, this.transform.position.z), Quaternion.identity);
-                        fragfour.GetComponent<Rigidbody2D>().velocity = Vector2.left; 
-                        patternSplit = true;
-                    }
-                    else if (this.GetComponent<Rigidbody2D>().velocity == Vector2.right)
-                    {
-                        GameObject fragone = Instantiate(iceFragment, this.transform.position, Quaternion.identity);
-                        fragone.GetComponent<Rigidbody2D>().velocity = Vector2.right;
-                        GameObject fragtwo = Instantiate(iceFragment, new Vector3(this.transform.position.x + 1, this.transform.position.y + 1, this.transform.position.z), Quaternion.identity);
-                        fragtwo.GetComponent<Rigidbody2D>().velocity = Vector2.right;
-                        GameObject fragthree = Instantiate(iceFragment, new Vector3(this.transform.position.x + 2, this.transform.position.y, this.transform.position.z), Quaternion.identity);
-                        fragthree.GetComponent<Rigidbody2D>().velocity = Vector2.right;
-                        GameObject fragfour = Instantiate(iceFragment, new Vector3(this.transform.position.x + 1, this.transform.position.y - 1, this.transform.position.z), Quaternion.identity);
-                        fragfour.GetComponent<Rigidbody2D>().velocity = Vector2.right; 
-                        patternSplit = true;
-                    }
-                    else if (this.GetComponent<Rigidbody2D>().velocity == Vector2.up)
-                    {
-                        GameObject fragone = Instantiate(iceFragment, this.transform.position, Quaternion.identity);
-                        fragone.GetComponent<Rigidbody2D>().velocity = Vector2.up;
-                        GameObject fragtwo = Instantiate(iceFragment, new Vector3(this.transform.position.x + 1, this.transform.position.y + 1, this.transform.position.z), Quaternion.identity);
-                        fragtwo.GetComponent<Rigidbody2D>().velocity = Vector2.up;
-                        GameObject fragthree = Instantiate(iceFragment, new Vector3(this.transform.position.x + 2, this.transform.position.y, this.transform.position.z), Quaternion.identity);
-                        fragthree.GetComponent<Rigidbody2D>().velocity = Vector2.up;
-                        GameObject fragfour = Instantiate(iceFragment, new Vector3(this.transform.position.x + 1, this.transform.position.y - 1, this.transform.position.z), Quaternion.identity);
-                        fragfour.GetComponent<Rigidbody2D>().velocity = Vector2.up;
-                        patternSplit = true;
-                    }
-                    else if (this.GetComponent<Rigidbody2D>().velocity == Vector2.down)
-                    {
-                        GameObject fragone = Instantiate(iceFragment, this.transform.position, Quaternion.identity);
-                        fragone.GetComponent<Rigidbody2D>().velocity = Vector2.down;
-                        GameObject fragtwo = Instantiate(iceFragment, new Vector3(this.transform.position.x + 1, this.transform.position.y + 1, this.transform.position.z), Quaternion.identity);
-                        fragtwo.GetComponent<Rigidbody2D>().velocity = Vector2.down;
-                        GameObject fragthree = Instantiate(iceFragment, new Vector3(this.transform.position.x + 2, this.transform.position.y, this.transform.position.z), Quaternion.identity);
-                        fragthree.GetComponent<Rigidbody2D>().velocity = Vector2.down;
-                        GameObject fragfour = Instantiate(iceFragment, new Vector3(this.transform.position.x + 1, this.transform.position.y - 1, this.transform.position.z), Quaternion.identity);
-                        fragfour.GetComponent<Rigidbody2D>().velocity = Vector2.down; 
-                        patternSplit = true;
-                    }
-                    Destroy(this.gameObject);
-                    break;
-                case 2:
+                case 1:
                     if (this.GetComponent<Rigidbody2D>().velocity == Vector2.left)
                     {
                         GameObject fragone = Instantiate(iceFragment, new Vector3(this.transform.position.x - 2, this.transform.position.y, this.transform.position.z), Quaternion.identity);
-                        fragone.GetComponent<Rigidbody2D>().velocity = Vector2.left;
+                        fragone.GetComponent<Rigidbody2D>().velocity = Vector2.left * speed;
                         GameObject fragtwo = Instantiate(iceFragment, new Vector3(this.transform.position.x, this.transform.position.y + pWs, this.transform.position.z), Quaternion.identity);
-                        fragtwo.GetComponent<Rigidbody2D>().velocity = Vector2.left;
+                        fragtwo.GetComponent<Rigidbody2D>().velocity = Vector2.left * speed;
                         GameObject fragthree = Instantiate(iceFragment, new Vector3(this.transform.position.x, this.transform.position.y - pWs, this.transform.position.z), Quaternion.identity);
-                        fragthree.GetComponent<Rigidbody2D>().velocity = Vector2.left;
+                        fragthree.GetComponent<Rigidbody2D>().velocity = Vector2.left * speed;
                         patternSplit = true;
                     }
                     else if (this.GetComponent<Rigidbody2D>().velocity == Vector2.right)
                     {
                         GameObject fragone = Instantiate(iceFragment, new Vector3(this.transform.position.x + 2, this.transform.position.y, this.transform.position.z), Quaternion.identity);
-                        fragone.GetComponent<Rigidbody2D>().velocity = Vector2.right;
+                        fragone.GetComponent<Rigidbody2D>().velocity = Vector2.right * speed;
                         GameObject fragtwo = Instantiate(iceFragment, new Vector3(this.transform.position.x, this.transform.position.y + pWs, this.transform.position.z), Quaternion.identity);
-                        fragtwo.GetComponent<Rigidbody2D>().velocity = Vector2.right;
+                        fragtwo.GetComponent<Rigidbody2D>().velocity = Vector2.right * speed;
                         GameObject fragthree = Instantiate(iceFragment, new Vector3(this.transform.position.x, this.transform.position.y - pWs, this.transform.position.z), Quaternion.identity);
-                        fragthree.GetComponent<Rigidbody2D>().velocity = Vector2.right;
+                        fragthree.GetComponent<Rigidbody2D>().velocity = Vector2.right * speed;
                         patternSplit = true;
                     }
                     else if (this.GetComponent<Rigidbody2D>().velocity == Vector2.up)
                     {
                         GameObject fragone = Instantiate(iceFragment, new Vector3(this.transform.position.x + 2, this.transform.position.y, this.transform.position.z), Quaternion.identity);
-                        fragone.GetComponent<Rigidbody2D>().velocity = Vector2.up;
+                        fragone.GetComponent<Rigidbody2D>().velocity = Vector2.up * speed;
                         GameObject fragtwo = Instantiate(iceFragment, new Vector3(this.transform.position.x + pWs, this.transform.position.y, this.transform.position.z), Quaternion.identity);
-                        fragtwo.GetComponent<Rigidbody2D>().velocity = Vector2.up;
+                        fragtwo.GetComponent<Rigidbody2D>().velocity = Vector2.up * speed;
                         GameObject fragthree = Instantiate(iceFragment, new Vector3(this.transform.position.x - pWs, this.transform.position.y, this.transform.position.z), Quaternion.identity);
-                        fragthree.GetComponent<Rigidbody2D>().velocity = Vector2.up;
+                        fragthree.GetComponent<Rigidbody2D>().velocity = Vector2.up * speed;
                         patternSplit = true;
                     }
                     else if (this.GetComponent<Rigidbody2D>().velocity == Vector2.down)
                     {
                         GameObject fragone = Instantiate(iceFragment, new Vector3(this.transform.position.x + 2, this.transform.position.y, this.transform.position.z), Quaternion.identity);
-                        fragone.GetComponent<Rigidbody2D>().velocity = Vector2.down;
+                        fragone.GetComponent<Rigidbody2D>().velocity = Vector2.down * speed;
                         GameObject fragtwo = Instantiate(iceFragment, new Vector3(this.transform.position.x, this.transform.position.y + pWs, this.transform.position.z), Quaternion.identity);
-                        fragtwo.GetComponent<Rigidbody2D>().velocity = Vector2.down;
+                        fragtwo.GetComponent<Rigidbody2D>().velocity = Vector2.down * speed;
                         GameObject fragthree = Instantiate(iceFragment, new Vector3(this.transform.position.x, this.transform.position.y - pWs, this.transform.position.z), Quaternion.identity);
-                        fragthree.GetComponent<Rigidbody2D>().velocity = Vector2.down;
+                        fragthree.GetComponent<Rigidbody2D>().velocity = Vector2.down * speed;
                         patternSplit = true;
                     }
                     Destroy(this.gameObject);
