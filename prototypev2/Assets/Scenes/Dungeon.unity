@@ -674,7 +674,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawn: 0
   bosses:
-  - {fileID: 1700757060633225713, guid: ccc27e9f46b2ec64d9ebe57981f0f1e2, type: 3}
+  - {fileID: 1700757060633225713, guid: 1f91ef489d563fb479c96a3d96da86c2, type: 3}
   - {fileID: 1700757060633225713, guid: ccc27e9f46b2ec64d9ebe57981f0f1e2, type: 3}
   - {fileID: 1700757060633225713, guid: ccc27e9f46b2ec64d9ebe57981f0f1e2, type: 3}
   - {fileID: 1700757060633225713, guid: ccc27e9f46b2ec64d9ebe57981f0f1e2, type: 3}
