@@ -4,8 +4,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
-    public enum Element { Ice, Fire, Earth, Wind, Time, Devil}
-    private Element currentDungeonElement; //Which elemental dungeon the player is in, used to load correct sprites into the game
+    public enum Element { None, Ice, Fire, Earth, Wind, Time, Devil}
+    private Element currentDungeonElement = Element.Ice; //Which elemental dungeon the player is in, used to load correct sprites into the game
     private int completion; //tracks which gods have been defeated
     private bool gameComplete = false;
     public int type;

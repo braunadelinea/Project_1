@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -10,7 +9,7 @@ public class PlayerManager : MonoBehaviour
 
     private int currentHealth = 3;
     private int maxHealth;
-    public GameObject currentroom;
+    public Vector3 currentroom;
     private int balance;
 
     private Inventory inventory;
@@ -21,6 +20,14 @@ public class PlayerManager : MonoBehaviour
     private bool movingRight;
     private bool moving;
     private GameObject currentItemCollision;
+    private bool isSpawned;
+    public bool IsSpawned
+    {
+        get
+        {
+            return isSpawned;
+        }
+    }
 
     private Animator animator;
 
@@ -37,6 +44,7 @@ public class PlayerManager : MonoBehaviour
         playerSpeed = 0.1f;
         movingRight = true;
         moving = false;
+        isSpawned = false;
     }
 
     void Update()
@@ -58,6 +66,13 @@ public class PlayerManager : MonoBehaviour
         //Vector3 cameraPosition = currentroom.transform.position;
         //cameraPosition.z -= 10;
         ApplyMovement();
+    }
+
+    public void SpawnPlayer(float x, float y)
+    {
+        gameObject.transform.position = new Vector3(x, y);
+        currentroom = new Vector3(x, y);
+        isSpawned = true;
     }
 
     private void ApplyMovement()
@@ -129,11 +144,7 @@ public class PlayerManager : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Room"))
-        {
-            currentroom = collision.gameObject;
-        }
-        else if (collision.CompareTag("Item"))
+        if (collision.CompareTag("Item"))
         {
             currentItemCollision = collision.gameObject;
         }
